@@ -9,18 +9,17 @@
 </head>
 <body>
   <header class="topbar">
-    <a href="#top" class="logo">PR</a>
+    <a href="index.html" class="logo">PR</a>
     <nav>
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
-      <a href="#skills" data-i18n="nav.skills">Skills</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="competitions.html" data-i18n="nav.competitions">Competitions</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
     </nav>
-    <button id="lang-toggle" class="lang" aria-label="Switch language">PL</button>
+    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <h1>Paweł Rejer</h1>
       <p class="lead" data-i18n="hero.lead">Final-year high-school student who likes to understand how things work — and then build them.</p>
@@ -40,46 +39,27 @@
       </ul>
     </section>
 
-    <section id="projects">
-      <h2 data-i18n="projects.title">Projects</h2>
-
-      <article class="project">
-        <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
-        <p data-i18n="manip.desc">A robotic arm with three joints that I designed and built myself — mechanics, electronics and control. The project is still evolving: I keep iterating on the design and fixing what testing reveals.</p>
-        <div id="manip-gallery" class="gallery"></div>
-        <p id="manip-empty" class="muted" data-i18n="manip.empty">Photos and video coming soon.</p>
-      </article>
-
-      <article class="project">
-        <h3>OrgoMap</h3>
-        <p data-i18n="orgo.desc">A Jira app that gives managers a bird's-eye view of the whole organisation in one click. Every task is a shape — colour shows its status, length shows how long it has been stuck there — with near-real-time data via webhooks. Instead of endless tables and late reports, OrgoMap flags problems with a clear message and lets you act on them right away.</p>
-      </article>
-    </section>
-
-    <section id="competitions">
-      <h2 data-i18n="comp.title">Olympiads &amp; competitions</h2>
-      <ul class="list">
-        <li>
-          <strong>EUROELEKTRA</strong> <span class="muted" data-i18n="comp.euro.group">— electrical engineering</span>
-          <div data-i18n="comp.euro.res">Finalist (2025/26); competing again in 2026/27</div>
-        </li>
-        <li>
-          <strong data-i18n="comp.owt.name">Technical Knowledge Olympiad — Mechanical Engineering (OWT-IM)</strong>
-          <div data-i18n="comp.owt.res">2026/27: qualified for stage II (district round)</div>
-        </li>
-        <li>
-          <strong data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</strong>
-          <div data-i18n="comp.agh.res">2026/27 participant</div>
-        </li>
-        <li>
-          <strong data-i18n="comp.swin.name">Antoni Swinarski Chemistry Competition</strong>
-          <div data-i18n="comp.swin.res">2026/27: qualified for stage II</div>
-        </li>
-        <li>
-          <strong>EDU-ELEKTRA</strong> <span class="muted" data-i18n="comp.euro.group">— electrical engineering</span>
-          <div data-i18n="comp.edu.res">2026/27 participant</div>
-        </li>
-      </ul>
+    <section>
+      <h2 data-i18n="home.featured">Featured</h2>
+      <div class="cards">
+        <a class="card" href="manipulator.html">
+          <img src="assets/manipulator/thumbs/manipulator-12.jpg" alt="Three-joint robotic manipulator" loading="lazy">
+          <div class="body">
+            <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
+            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control.</p>
+            <span class="more" data-i18n="more.project">See the project →</span>
+          </div>
+        </a>
+        <a class="card placeholder-img" href="competitions.html">
+          <div class="ph">🏅</div>
+          <div class="body">
+            <h3 data-i18n="comp.title">Olympiads &amp; competitions</h3>
+            <p data-i18n="comp.short">Electrical engineering, mechanics, physics and chemistry — on a timeline.</p>
+            <span class="more" data-i18n="more.timeline">See the timeline →</span>
+          </div>
+        </a>
+      </div>
+      <p style="margin-top:1.25rem"><a href="projects.html" data-i18n="more.allprojects">All projects →</a></p>
     </section>
 
     <section id="skills">
@@ -115,10 +95,7 @@
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Paweł Rejer</p>
-  </footer>
-
+  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
   <script src="script.js"></script>
 </body>
 </html>

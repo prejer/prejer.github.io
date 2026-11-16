@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitions — Paweł Rejer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo">PR</a>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="competitions.html" class="active" data-i18n="nav.competitions">Competitions</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1 data-i18n="comp.title">Olympiads &amp; competitions</h1>
+      <p class="lead" data-i18n="comp.lead">Electrical engineering, mechanics, physics and chemistry.</p>
+    </section>
+
+    <section>
+      <!--
+        HOW TO EDIT: each event is one <li class="ev">.
+        class="ev done"      → finished (filled dot)
+        class="ev upcoming"  → still ahead (dashed dot) + "Upcoming" badge
+        Polish text for each data-i18n key lives in script.js.
+      -->
+      <ol class="timeline">
+        <li class="year">2025/26</li>
+        <li class="ev done">
+          <time>2026</time>
+          <h3>EUROELEKTRA <span class="badge win" data-i18n="b.finalist">Finalist</span></h3>
+          <p data-i18n="t.euro25">National electrical olympiad — electrical engineering group. Reached the final.</p>
+        </li>
+
+        <li class="year">2026/27</li>
+        <li class="ev done">
+          <time>23.10.2026</time>
+          <h3 data-i18n="comp.owt.name">Technical Knowledge Olympiad — Mechanical Engineering (OWT-IM)</h3>
+          <p data-i18n="t.owt1">Stage I: 25/30 points — qualified for stage II.</p>
+        </li>
+        <li class="ev done">
+          <time>11.2026</time>
+          <h3>EDU-ELEKTRA</h3>
+          <p data-i18n="t.edu1">Stage I — electrical engineering group. Waiting for results.</p>
+        </li>
+        <li class="ev done">
+          <time>2026</time>
+          <h3 data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</h3>
+          <p data-i18n="t.agh1">Stage I.</p>
+        </li>
+        <li class="ev upcoming">
+          <time>18.11.2026</time>
+          <h3>EUROELEKTRA <span class="badge" data-i18n="b.upcoming">Upcoming</span></h3>
+          <p data-i18n="t.euro26">Electrical engineering group.</p>
+        </li>
+        <li class="ev upcoming">
+          <time>19.12.2026</time>
+          <h3><span data-i18n="comp.swin.name">Antoni Swinarski Chemistry Competition</span> <span class="badge" data-i18n="b.upcoming">Upcoming</span></h3>
+          <p data-i18n="t.swin2">Stage II.</p>
+        </li>
+        <li class="ev upcoming">
+          <time>22.01.2027</time>
+          <h3><span data-i18n="comp.owt.short">OWT-IM</span> <span class="badge" data-i18n="b.upcoming">Upcoming</span></h3>
+          <p data-i18n="t.owt2">Stage II (district round).</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-joint manipulator — Paweł Rejer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo">PR</a>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="competitions.html" data-i18n="nav.competitions">Competitions</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <a class="back" href="projects.html" data-i18n="back.projects">← All projects</a>
+      <h1 data-i18n="manip.title">Three-joint robotic manipulator</h1>
+      <p class="lead" data-i18n="manip.desc">A robotic arm with three joints that I designed and built myself — mechanics, electronics and control. The project is still evolving: I keep iterating on the design and fixing what testing reveals.</p>
+      <dl class="facts">
+        <div><dt data-i18n="f.joints">Joints</dt><dd>3</dd></div>
+        <div><dt data-i18n="f.drive">Drive</dt><dd data-i18n="f.drive.v">Stepper motors, belts</dd></div>
+        <div><dt data-i18n="f.base">Base</dt><dd data-i18n="f.base.v">Rotating turntable</dd></div>
+        <div><dt data-i18n="f.status">Status</dt><dd data-i18n="f.status.v">In progress</dd></div>
+      </dl>
+      <img class="hero-img zoom" src="assets/manipulator/manipulator-12.jpg" alt="The manipulator on its stand, controlled from a laptop">
+    </section>
+
+    <section>
+      <h2 data-i18n="video.title">Video</h2>
+      <div class="video-box" data-i18n="video.soon">Video coming soon.</div>
+    </section>
+
+    <section>
+      <h2 data-i18n="log.title">Build log</h2>
+      <ol class="log">
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-01.jpg" data-full="assets/manipulator/manipulator-01.jpg" alt="" loading="lazy"><div><time>08.11.2026</time><p data-i18n="log.01">First stepper motor mounted under a base plate.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-02.jpg" data-full="assets/manipulator/manipulator-02.jpg" alt="" loading="lazy"><div><time>10.11.2026</time><p data-i18n="log.02">Belt drive — pulley and belt transferring motion from the motor.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-03.jpg" data-full="assets/manipulator/manipulator-03.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.03">Shoulder bracket on its base plate, with motors and pulleys waiting to be fitted.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-04.jpg" data-full="assets/manipulator/manipulator-04.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.04">Shoulder assembled: two stepper motors driving the joints through belts.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-05.jpg" data-full="assets/manipulator/manipulator-05.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.05">First arm link attached.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-06.jpg" data-full="assets/manipulator/manipulator-06.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.06">Arm standing and wired up to the controller board.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-07.jpg" data-full="assets/manipulator/manipulator-07.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.07">First motion tests, controlled from the laptop.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-08.jpg" data-full="assets/manipulator/manipulator-08.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.08">New base plate with the motor for the rotation joint.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-09.jpg" data-full="assets/manipulator/manipulator-09.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.09">Full arm with both links in place.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-10.jpg" data-full="assets/manipulator/manipulator-10.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.10">Turntable bearing for rotating the whole arm.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-11.jpg" data-full="assets/manipulator/manipulator-11.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.11">Arm mounted on the rotating base — all three joints together.</p></div></li>
+        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-12.jpg" data-full="assets/manipulator/manipulator-12.jpg" alt="" loading="lazy"><div><time>16.11.2026</time><p data-i18n="log.12">The manipulator on its stand, controlled from the laptop.</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

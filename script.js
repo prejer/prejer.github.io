@@ -1,17 +1,19 @@
-// ---------- Manipulator media ----------
-// Put files in assets/manipulator/ and list them here.
-// Example:
-//   { type: "image", src: "assets/manipulator/arm-1.jpg", alt: "Manipulator — front view" },
-//   { type: "video", src: "assets/manipulator/demo.mp4", poster: "assets/manipulator/arm-1.jpg" },
-const manipulatorMedia = [];
-
-// ---------- Translations (English is the default) ----------
+// =====================================================================
+// Polish translations. English text lives directly in the HTML files;
+// every element with data-i18n="key" is swapped for pl[key] in Polish.
+// =====================================================================
 const pl = {
-  "nav.about": "O mnie",
+  // nav
+  "nav.home": "Start",
   "nav.projects": "Projekty",
-  "nav.competitions": "Olimpiady",
-  "nav.skills": "Umiejętności",
+  "nav.competitions": "Konkursy",
   "nav.contact": "Kontakt",
+  "back.projects": "← Wszystkie projekty",
+  "more.project": "Zobacz projekt →",
+  "more.timeline": "Zobacz oś czasu →",
+  "more.allprojects": "Wszystkie projekty →",
+
+  // home
   "hero.lead": "Maturzysta, który lubi rozumieć, jak coś działa — a potem to zbudować.",
   "hero.tags": "Robotyka · Elektrotechnika · Fizyka · Oprogramowanie",
   "about.title": "O mnie",
@@ -22,21 +24,7 @@ const pl = {
   "about.i3": "Budowanie produktów — od pomysłu do pitchu",
   "about.i4": "Nauka języków (obecnie francuski)",
   "about.i5": "Nauka o treningu i fizjologia wysiłku",
-  "projects.title": "Projekty",
-  "manip.title": "Manipulator trójprzegubowy",
-  "manip.desc": "Ramię robotyczne z trzema przegubami, które samodzielnie zaprojektowałem i zbudowałem — mechanika, elektronika i sterowanie. Projekt wciąż się rozwija: ciągle poprawiam konstrukcję i usuwam to, co wychodzi w testach.",
-  "manip.empty": "Zdjęcia i film już wkrótce.",
-  "orgo.desc": "Aplikacja do Jiry, która daje menedżerom widok całej organizacji jednym kliknięciem. Każde zadanie to kształt — kolor pokazuje status, długość to, jak długo w nim tkwi — a dane są niemal w czasie rzeczywistym dzięki webhookom. Zamiast niekończących się tabel i spóźnionych raportów OrgoMap sygnalizuje problemy jasnym komunikatem i pozwala od razu zareagować.",
-  "comp.title": "Olimpiady i konkursy",
-  "comp.euro.group": "— elektrotechnika",
-  "comp.euro.res": "Finalista (2025/26); w 2026/27 startuję ponownie",
-  "comp.owt.name": "Olimpiada Wiedzy Technicznej — Inżynieria Mechaniczna (OWT-IM)",
-  "comp.owt.res": "2026/27: awans do II etapu (okręgowego)",
-  "comp.agh.name": "Olimpiada „O Diamentowy Indeks AGH” — fizyka",
-  "comp.agh.res": "Uczestnik 2026/27",
-  "comp.swin.name": "Konkurs Chemiczny im. Antoniego Swinarskiego",
-  "comp.swin.res": "2026/27: awans do II etapu",
-  "comp.edu.res": "Uczestnik 2026/27",
+  "home.featured": "Wyróżnione",
   "skills.title": "Umiejętności",
   "skills.eng": "Inżynieria",
   "skills.eng.list": "Obwody elektryczne · Mechanika i konstrukcja · Robotyka",
@@ -47,12 +35,65 @@ const pl = {
   "skills.lang": "Języki",
   "skills.lang.list": "Polski (ojczysty) · Angielski · Francuski (w trakcie nauki)",
   "contact.title": "Kontakt",
-  "contact.p": "Chcesz porozmawiać o projekcie, współpracy albo czymkolwiek technicznym? Napisz."
+  "contact.p": "Chcesz porozmawiać o projekcie, współpracy albo czymkolwiek technicznym? Napisz.",
+
+  // projects
+  "projects.title": "Projekty",
+  "projects.lead": "Rzeczy, które projektuję, buduję i rozwijam.",
+  "orgo.desc": "Aplikacja do Jiry, która daje menedżerom widok całej organizacji jednym kliknięciem. Każde zadanie to kształt — kolor pokazuje status, długość to, jak długo w nim tkwi — a dane są niemal w czasie rzeczywistym dzięki webhookom. Zamiast niekończących się tabel i spóźnionych raportów OrgoMap sygnalizuje problemy jasnym komunikatem i pozwala od razu zareagować.",
+
+  // manipulator
+  "manip.title": "Manipulator trójprzegubowy",
+  "manip.short": "Ramię robotyczne zaprojektowane i zbudowane od zera — mechanika, elektronika i sterowanie.",
+  "manip.desc": "Ramię robotyczne z trzema przegubami, które samodzielnie zaprojektowałem i zbudowałem — mechanika, elektronika i sterowanie. Projekt wciąż się rozwija: ciągle poprawiam konstrukcję i usuwam to, co wychodzi w testach.",
+  "f.joints": "Przeguby",
+  "f.drive": "Napęd",
+  "f.drive.v": "Silniki krokowe, paski",
+  "f.base": "Podstawa",
+  "f.base.v": "Obrotowa",
+  "f.status": "Status",
+  "f.status.v": "W trakcie",
+  "video.title": "Film",
+  "video.soon": "Film już wkrótce.",
+  "log.title": "Dziennik budowy",
+  "log.01": "Pierwszy silnik krokowy zamontowany pod płytą bazową.",
+  "log.02": "Przekładnia pasowa — koło pasowe i pasek przenoszą ruch z silnika.",
+  "log.03": "Wspornik barku na płycie bazowej; silniki i koła pasowe czekają na montaż.",
+  "log.04": "Bark zmontowany: dwa silniki krokowe napędzają przeguby przez paski.",
+  "log.05": "Zamontowane pierwsze ramię.",
+  "log.06": "Ramię stoi i jest podłączone do płytki sterującej.",
+  "log.07": "Pierwsze testy ruchu, sterowanie z laptopa.",
+  "log.08": "Nowa płyta bazowa z silnikiem przegubu obrotowego.",
+  "log.09": "Pełne ramię z oboma członami.",
+  "log.10": "Łożysko obrotowe do obracania całego ramienia.",
+  "log.11": "Ramię na obrotowej podstawie — wszystkie trzy przeguby razem.",
+  "log.12": "Manipulator na podstawie, sterowany z laptopa.",
+
+  // competitions
+  "comp.title": "Olimpiady i konkursy",
+  "comp.short": "Elektrotechnika, mechanika, fizyka i chemia — na osi czasu.",
+  "comp.lead": "Elektrotechnika, mechanika, fizyka i chemia.",
+  "comp.owt.name": "Olimpiada Wiedzy Technicznej — Inżynieria Mechaniczna (OWT-IM)",
+  "comp.owt.short": "OWT-IM",
+  "comp.agh.name": "Olimpiada „O Diamentowy Indeks AGH” — fizyka",
+  "comp.swin.name": "Konkurs Chemiczny im. Antoniego Swinarskiego",
+  "b.finalist": "Finalista",
+  "b.upcoming": "Wkrótce",
+  "t.euro25": "Ogólnopolska olimpiada elektryczna — grupa elektrotechnika. Udział w finale.",
+  "t.owt1": "I etap: 25/30 punktów — awans do II etapu.",
+  "t.edu1": "I etap — grupa elektrotechnika. Czekam na wyniki.",
+  "t.agh1": "I etap.",
+  "t.euro26": "Grupa elektrotechnika.",
+  "t.swin2": "II etap.",
+  "t.owt2": "II etap (okręgowy)."
 };
 
-// Remember the English text that is already in the HTML
+// ---------------------------------------------------------------------
+// Language switching (English default)
+// ---------------------------------------------------------------------
 const nodes = document.querySelectorAll("[data-i18n]");
 nodes.forEach(n => { n.dataset.en = n.innerHTML; });
+const toggle = document.getElementById("lang-toggle");
 
 function setLang(lang) {
   nodes.forEach(n => {
@@ -60,8 +101,14 @@ function setLang(lang) {
     n.innerHTML = lang === "pl" && pl[key] ? pl[key] : n.dataset.en;
   });
   document.documentElement.lang = lang;
-  document.getElementById("lang-toggle").textContent = lang === "pl" ? "EN" : "PL";
+  toggle.textContent = lang === "pl" ? "EN" : "PL";
   try { localStorage.setItem("lang", lang); } catch (e) {}
+  // keep language when moving between pages (also works without localStorage)
+  document.querySelectorAll('a[href$=".html"], a[href*=".html#"]').forEach(a => {
+    const url = new URL(a.getAttribute("href"), location.href);
+    if (lang === "pl") url.searchParams.set("lang", "pl"); else url.searchParams.delete("lang");
+    a.href = url.href;
+  });
 }
 
 let current = "en";
@@ -69,44 +116,48 @@ const urlLang = new URLSearchParams(location.search).get("lang");
 if (urlLang === "pl" || urlLang === "en") current = urlLang;
 else { try { current = localStorage.getItem("lang") || "en"; } catch (e) {} }
 setLang(current);
-
-document.getElementById("lang-toggle").addEventListener("click", () => {
+toggle.addEventListener("click", () => {
   current = current === "en" ? "pl" : "en";
   setLang(current);
 });
 
-// ---------- Gallery ----------
-const gallery = document.getElementById("manip-gallery");
-if (manipulatorMedia.length) {
-  document.getElementById("manip-empty").hidden = true;
-  manipulatorMedia.forEach(m => {
-    let el;
-    if (m.type === "video") {
-      el = document.createElement("video");
-      el.src = m.src;
-      el.controls = true;
-      el.preload = "metadata";
-      el.playsInline = true;
-      if (m.poster) el.poster = m.poster;
-      el.className = "wide";
-    } else {
-      el = document.createElement("img");
-      el.src = m.src;
-      el.alt = m.alt || "";
-      el.loading = "lazy";
-      el.addEventListener("click", () => {
-        const box = document.createElement("div");
-        box.className = "lightbox";
-        const big = document.createElement("img");
-        big.src = m.src;
-        big.alt = m.alt || "";
-        box.appendChild(big);
-        box.addEventListener("click", () => box.remove());
-        document.body.appendChild(box);
-      });
-    }
-    gallery.appendChild(el);
-  });
+// ---------------------------------------------------------------------
+// Lightbox for images with class="zoom" (arrows + keyboard)
+// ---------------------------------------------------------------------
+const zoomables = [...document.querySelectorAll("img.zoom")];
+zoomables.forEach((img, i) => img.addEventListener("click", () => openBox(i)));
+
+function openBox(start) {
+  let i = start;
+  const box = document.createElement("div");
+  box.className = "lightbox";
+  box.innerHTML = '<img alt=""><div class="cap"></div>' +
+    '<button class="prev" aria-label="Previous">‹</button>' +
+    '<button class="next" aria-label="Next">›</button>' +
+    '<button class="close" aria-label="Close">✕</button>';
+  const big = box.querySelector("img"), cap = box.querySelector(".cap");
+  const show = () => {
+    const el = zoomables[i];
+    big.src = el.dataset.full || el.src;
+    const p = el.parentElement.querySelector("p");
+    cap.textContent = p ? p.textContent : "";
+  };
+  const move = d => { i = (i + d + zoomables.length) % zoomables.length; show(); };
+  const close = () => { box.remove(); document.removeEventListener("keydown", onKey); };
+  const onKey = e => {
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") move(-1);
+    if (e.key === "ArrowRight") move(1);
+  };
+  box.querySelector(".prev").onclick = e => { e.stopPropagation(); move(-1); };
+  box.querySelector(".next").onclick = e => { e.stopPropagation(); move(1); };
+  box.querySelector(".close").onclick = close;
+  box.addEventListener("click", e => { if (e.target === box) close(); });
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(box);
+  show();
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll(".year").forEach(el => {
+  if (el.tagName === "SPAN") el.textContent = new Date().getFullYear();
+});
