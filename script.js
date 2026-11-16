@@ -71,21 +71,28 @@ const pl = {
 
   // competitions
   "comp.title": "Olimpiady i konkursy",
-  "comp.short": "Elektrotechnika, mechanika, fizyka i chemia — na osi czasu.",
-  "comp.lead": "Elektrotechnika, mechanika, fizyka i chemia.",
-  "comp.owt.name": "Olimpiada Wiedzy Technicznej — Inżynieria Mechaniczna (OWT-IM)",
-  "comp.owt.short": "OWT-IM",
+  "comp.short": "Fizyka, elektrotechnika i mechanika — na osi czasu.",
+  "comp.lead": "Fizyka, elektrotechnika i mechanika.",
+  "comp.owt.name": "Olimpiada Wiedzy Technicznej — Inżynieria Mechaniczna",
   "comp.agh.name": "Olimpiada „O Diamentowy Indeks AGH” — fizyka",
-  "comp.swin.name": "Konkurs Chemiczny im. Antoniego Swinarskiego",
   "b.finalist": "Finalista",
   "b.upcoming": "Wkrótce",
-  "t.euro25": "Ogólnopolska olimpiada elektryczna — grupa elektrotechnika. Udział w finale.",
-  "t.owt1": "I etap: 25/30 punktów — awans do II etapu.",
-  "t.edu1": "I etap — grupa elektrotechnika. Czekam na wyniki.",
-  "t.agh1": "I etap.",
-  "t.euro26": "Grupa elektrotechnika.",
-  "t.swin2": "II etap.",
-  "t.owt2": "II etap (okręgowy)."
+  "t.owt2": "Awans do II etapu.",
+  "t.euro": "Ogólnopolska olimpiada elektryczna — grupa elektrotechnika.",
+  "comp.of.name": "Olimpiada Fizyczna",
+  "t.of25": "Awans do II etapu w części teoretycznej i doświadczalnej.",
+  "comp.mtf.name": "Międzyszkolny Turniej Fizyczny",
+  "t.mtf": "Województwo zachodniopomorskie.",
+  "b.stage2": "II etap",
+  "b.first": "I miejsce",
+  "b.pending": "Czekam na wyniki",
+
+  // programmes
+  "prog.title": "Programy",
+  "prog.zdolni.when": "2022 – obecnie",
+  "prog.zdolni.name": "Fundusz ZDOLNI — stypendysta",
+  "prog.up.when": "lipiec – październik 2026",
+  "prog.up.desc": "W ramach programu zrealizowałem projekt CNow."
 };
 
 // ---------------------------------------------------------------------
