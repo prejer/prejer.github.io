@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paweł Rejer</title>
+  <meta name="description" content="Paweł Rejer — engineering, robotics, physics and building things.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#top" class="logo">PR</a>
+    <nav>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#competitions" data-i18n="nav.competitions">Competitions</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button id="lang-toggle" class="lang" aria-label="Switch language">PL</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Paweł Rejer</h1>
+      <p class="lead" data-i18n="hero.lead">Final-year high-school student who likes to understand how things work — and then build them.</p>
+      <p class="tags" data-i18n="hero.tags">Robotics · Electrical engineering · Physics · Software</p>
+    </section>
+
+    <section id="about">
+      <h2 data-i18n="about.title">About me</h2>
+      <p data-i18n="about.p1">I'm in my final year of secondary school, preparing for the matura and taking part in several science and engineering olympiads. Most of my free time goes into projects: a three-joint robotic manipulator I designed myself, and software tools that solve real problems.</p>
+      <p data-i18n="about.p2">Things I'm passionate about:</p>
+      <ul class="interests">
+        <li data-i18n="about.i1">Robotics and mechanical design</li>
+        <li data-i18n="about.i2">Electrical engineering and physics</li>
+        <li data-i18n="about.i3">Building software products — from idea to pitch</li>
+        <li data-i18n="about.i4">Learning languages (currently French)</li>
+        <li data-i18n="about.i5">The science behind training and exercise physiology</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 data-i18n="projects.title">Projects</h2>
+
+      <article class="project">
+        <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
+        <p data-i18n="manip.desc">A robotic arm with three joints that I designed and built myself — mechanics, electronics and control. The project is still evolving: I keep iterating on the design and fixing what testing reveals.</p>
+        <div id="manip-gallery" class="gallery"></div>
+        <p id="manip-empty" class="muted" data-i18n="manip.empty">Photos and video coming soon.</p>
+      </article>
+
+      <article class="project">
+        <h3>OrgoMap</h3>
+        <p data-i18n="orgo.desc">A Jira app that gives managers a bird's-eye view of the whole organisation in one click. Every task is a shape — colour shows its status, length shows how long it has been stuck there — with near-real-time data via webhooks. Instead of endless tables and late reports, OrgoMap flags problems with a clear message and lets you act on them right away.</p>
+      </article>
+    </section>
+
+    <section id="competitions">
+      <h2 data-i18n="comp.title">Olympiads &amp; competitions</h2>
+      <ul class="list">
+        <li>
+          <strong>EUROELEKTRA</strong> <span class="muted" data-i18n="comp.euro.group">— electrical engineering</span>
+          <div data-i18n="comp.euro.res">Finalist (2025/26); competing again in 2026/27</div>
+        </li>
+        <li>
+          <strong data-i18n="comp.owt.name">Technical Knowledge Olympiad — Mechanical Engineering (OWT-IM)</strong>
+          <div data-i18n="comp.owt.res">2026/27: qualified for stage II (district round)</div>
+        </li>
+        <li>
+          <strong data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</strong>
+          <div data-i18n="comp.agh.res">2026/27 participant</div>
+        </li>
+        <li>
+          <strong data-i18n="comp.swin.name">Antoni Swinarski Chemistry Competition</strong>
+          <div data-i18n="comp.swin.res">2026/27: qualified for stage II</div>
+        </li>
+        <li>
+          <strong>EDU-ELEKTRA</strong> <span class="muted" data-i18n="comp.euro.group">— electrical engineering</span>
+          <div data-i18n="comp.edu.res">2026/27 participant</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2 data-i18n="skills.title">Skills</h2>
+      <div class="skills">
+        <div>
+          <h3 data-i18n="skills.eng">Engineering</h3>
+          <p data-i18n="skills.eng.list">Electrical circuits · Mechanics &amp; mechanical design · Robotics</p>
+        </div>
+        <div>
+          <h3 data-i18n="skills.sw">Software</h3>
+          <p data-i18n="skills.sw.list">Web development · Jira apps · LaTeX</p>
+        </div>
+        <div>
+          <h3 data-i18n="skills.biz">Product</h3>
+          <p data-i18n="skills.biz.list">Market research · Pitching · Turning ideas into products</p>
+        </div>
+        <div>
+          <h3 data-i18n="skills.lang">Languages</h3>
+          <p data-i18n="skills.lang.list">Polish (native) · English · French (learning)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.p">Want to talk about a project, a collaboration or anything engineering? Reach out.</p>
+      <ul class="contact">
+        <li><a href="mailto:p.rejer10@gmail.com">p.rejer10@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Paweł Rejer</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
