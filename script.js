@@ -156,6 +156,25 @@ const pl = {
   "stand.l7": "Klejenie podstawy wokół słupka, ściśniętej na czas schnięcia.",
   "stand.l8": "Gotowy stojak: notatki na ramionach, marker suchościeralny w rowku podstawy.",
 
+  // autocam
+  "ac.label": "Robotyka · 2025",
+  "ac.short": "Robot mobilny na kołach mecanum z obrotową wieżyczką i ramieniem na serwie — zaprojektowany i zbudowany od zera w pięć dni.",
+  "ac.desc": "Robot mobilny na kołach mecanum z obrotową wieżyczką i ramieniem napędzanym serwem. Zaprojektowałem i zbudowałem go w pięć dni — podwozie ze sklejki z drukowanymi częściami, napęd wielokierunkowy i elektronika w zdejmowanym schowku.",
+  "ac.c1": "Koła mecanum",
+  "ac.c2": "Napęd wielokierunkowy",
+  "ac.c3": "Serwo",
+  "ac.when": "Wrzesień 2025",
+  "ac.time": "Czas budowy",
+  "ac.time.v": "5 dni",
+  "ac.mat.v": "Sklejka, wydruki 3D",
+  "ac.drive": "Napęd",
+  "ac.drive.v": "4 × koła mecanum",
+  "ac.glabel": "Zdjęcia",
+  "ac.gtitle": "Robot",
+  "log.lead2": "Kliknij zdjęcie, żeby je powiększyć.",
+  "ac.p1": "Podwozie na kołach mecanum z obrotową wieżyczką i ramieniem na serwie.",
+  "ac.p2": "Schowek na elektronikę pod zdejmowanym blatem: przetwornica i płytki prototypowe.",
+
   // achievements
   "comp.title": "Osiągnięcia",
   "comp.homelead": "Olimpiady i konkursy z fizyki, elektrotechniki i mechaniki.",

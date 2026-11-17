@@ -317,7 +317,7 @@ footer a { color: var(--muted); }
   .brand span:last-child { display: none; }
   .topbar nav { gap: .9rem; overflow-x: auto; scrollbar-width: none; }
   .topbar nav a { font-size: .85rem; white-space: nowrap; }
-  .pipeline, .log { grid-template-columns: 1fr; }
+  .pipeline, .log { grid-template-columns: 1fr !important; }
   .stats .wrap { grid-template-columns: 1fr; }
   .stat { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--line) !important; }
   .stat:first-child { border-top: none !important; }
