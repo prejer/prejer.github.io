@@ -4,48 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Paweł Rejer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <a href="index.html" class="logo">PR</a>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
-      <a href="competitions.html" data-i18n="nav.competitions">Competitions</a>
-      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="mark">PR</span><span>Paweł Rejer</span></a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+        <a href="competitions.html" data-i18n="nav.competitions">Achievements</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    </div>
   </header>
 
   <main>
     <section class="page-head">
-      <h1 data-i18n="projects.title">Projects</h1>
-      <p class="lead" data-i18n="projects.lead">Things I design, build and ship.</p>
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.projects">Projects</span></div>
+        <h1 data-i18n="projects.title">Projects</h1>
+        <p class="lead" data-i18n="projects.lead">Hardware and software I design, build and ship — end to end.</p>
+      </div>
     </section>
 
-    <section>
-      <div class="cards">
-        <a class="card" href="manipulator.html">
-          <img src="assets/manipulator/thumbs/manipulator-12.jpg" alt="Three-joint robotic manipulator" loading="lazy">
+    <section class="section alt">
+      <div class="wrap">
+        <a class="feature" href="manipulator.html">
+          <img src="assets/manipulator/manipulator-11.jpg" alt="Manipulator on its rotating base" loading="lazy">
           <div class="body">
+            <p class="eyebrow" style="margin:0" data-i18n="feat.label2">Robotics · 2026</p>
             <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
-            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control.</p>
-            <span class="more" data-i18n="more.project">See the project →</span>
+            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control. Driven from my own Python application with a live 3D visualisation, talking to Arduino firmware.</p>
+            <ul class="chips"><li>Python</li><li>Arduino</li><li data-i18n="chip.steppers">Stepper motors</li><li data-i18n="chip.kin">Kinematics</li></ul>
+            <span class="more" data-i18n="more.project">Read the case study →</span>
           </div>
         </a>
-        <div class="card placeholder-img">
-          <div class="ph">OrgoMap</div>
-          <div class="body">
-            <h3>OrgoMap</h3>
-            <p data-i18n="orgo.desc">A Jira app that gives managers a bird's-eye view of the whole organisation in one click. Every task is a shape — colour shows its status, length shows how long it has been stuck there — with near-real-time data via webhooks. Instead of endless tables and late reports, OrgoMap flags problems with a clear message and lets you act on them right away.</p>
+        <div class="cards">
+          <div class="card">
+            <div class="media graphic">
+              <div class="orgo-viz"><i class="a w2"></i><i class="b"></i><i class="w3"></i><i class="b w3"></i><i class="c"></i><i class="a w2"></i><i></i><i class="a"></i><i class="b w2"></i><i class="c w2"></i><i class="w3"></i><i class="a w3"></i></div>
+            </div>
+            <div class="body">
+              <p class="eyebrow" style="margin:0" data-i18n="orgo.label">Software · SaaS</p>
+              <h3>OrgoMap</h3>
+              <p data-i18n="orgo.desc">A Jira app that gives managers a bird's-eye view of the whole organisation in one click. Every task is a shape — colour shows its status, length shows how long it has been there — with near-real-time data via webhooks. Instead of endless tables and late reports, OrgoMap flags problems with a clear message and lets you act on them right away.</p>
+              <ul class="chips"><li>Jira</li><li>Webhooks</li><li>SaaS</li></ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <footer>
+    <div class="wrap">
+      <span>© <span class="year"></span> Paweł Rejer</span>
+      <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,69 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Competitions — Paweł Rejer</title>
+  <title>Achievements — Paweł Rejer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <a href="index.html" class="logo">PR</a>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="projects.html" data-i18n="nav.projects">Projects</a>
-      <a href="competitions.html" class="active" data-i18n="nav.competitions">Competitions</a>
-      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="mark">PR</span><span>Paweł Rejer</span></a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="competitions.html" class="active" data-i18n="nav.competitions">Achievements</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    </div>
   </header>
 
   <main>
     <section class="page-head">
-      <h1 data-i18n="comp.title">Olympiads &amp; competitions</h1>
-      <p class="lead" data-i18n="comp.lead">Physics, electrical and mechanical engineering.</p>
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.competitions">Achievements</span></div>
+        <h1 data-i18n="comp.title">Achievements</h1>
+        <p class="lead" data-i18n="comp.lead">Olympiads and competitions in physics, electrical and mechanical engineering.</p>
+      </div>
     </section>
 
-    <section>
-      <!--
-        HOW TO EDIT: each event is one <li class="ev">.
-        class="ev done"      → finished (filled dot)
-        class="ev upcoming"  → still ahead (dashed dot) + "Upcoming" badge
-        Polish text for each data-i18n key lives in script.js.
-      -->
-      <ol class="timeline">
-        <li class="year">2025/26</li>
-        <li class="ev done">
-          <h3>EUROELEKTRA <span class="badge win" data-i18n="b.finalist">Finalist</span></h3>
-          <p data-i18n="t.euro">National electrical engineering olympiad — electrical engineering group.</p>
-        </li>
-        <li class="ev done">
-          <h3><span data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</span> <span class="badge win" data-i18n="b.finalist">Finalist</span></h3>
-        </li>
-        <li class="ev done">
-          <h3><span data-i18n="comp.of.name">Polish Physics Olympiad</span> <span class="badge win" data-i18n="b.stage2">Stage II</span></h3>
-          <p data-i18n="t.of25">Qualified for stage II in both the theoretical and the experimental part.</p>
-        </li>
-        <li class="ev done">
-          <h3><span data-i18n="comp.mtf.name">Inter-school Physics Tournament</span> <span class="badge win" data-i18n="b.first">1st place</span></h3>
-          <p data-i18n="t.mtf">West Pomeranian Voivodeship.</p>
-        </li>
+    <section class="section alt">
+      <div class="wrap">
+        <!--
+          HOW TO EDIT: each event is one <li class="ev">.
+          class="ev done"      → achieved (filled dot)
+          class="ev upcoming"  → still ahead / waiting (dashed)
+          Polish text for each data-i18n key lives in script.js.
+        -->
+        <ol class="timeline">
+          <li class="year">2026/27</li>
+          <li class="ev upcoming">
+            <time>22.01.2027</time>
+            <h3><span data-i18n="comp.owt.name">Technical Knowledge Olympiad — Mechanical Engineering</span> <span class="badge" data-i18n="b.upcoming">Upcoming</span></h3>
+            <p data-i18n="t.owt2">Qualified for stage II.</p>
+          </li>
+          <li class="ev upcoming">
+            <h3><span data-i18n="comp.of.name">Polish Physics Olympiad</span> <span class="badge" data-i18n="b.pending">Results pending</span></h3>
+          </li>
+          <li class="ev upcoming">
+            <h3><span data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</span> <span class="badge" data-i18n="b.pending">Results pending</span></h3>
+          </li>
 
-        <li class="year">2026/27</li>
-        <li class="ev upcoming">
-          <time>22.01.2027</time>
-          <h3><span data-i18n="comp.owt.name">Technical Knowledge Olympiad — Mechanical Engineering</span> <span class="badge" data-i18n="b.upcoming">Upcoming</span></h3>
-          <p data-i18n="t.owt2">Qualified for stage II.</p>
-        </li>
-        <li class="ev upcoming">
-          <h3><span data-i18n="comp.of.name">Polish Physics Olympiad</span> <span class="badge" data-i18n="b.pending">Results pending</span></h3>
-        </li>
-        <li class="ev upcoming">
-          <h3><span data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</span> <span class="badge" data-i18n="b.pending">Results pending</span></h3>
-        </li>
-      </ol>
+          <li class="year">2025/26</li>
+          <li class="ev done">
+            <h3>EUROELEKTRA <span class="badge win" data-i18n="b.finalist">Finalist</span></h3>
+            <p data-i18n="t.euro">National electrical engineering olympiad — electrical engineering group.</p>
+          </li>
+          <li class="ev done">
+            <h3><span data-i18n="comp.agh.name">“Diamond Index” AGH Olympiad — Physics</span> <span class="badge win" data-i18n="b.finalist">Finalist</span></h3>
+          </li>
+          <li class="ev done">
+            <h3><span data-i18n="comp.of.name">Polish Physics Olympiad</span> <span class="badge win" data-i18n="b.stage2">Stage II</span></h3>
+            <p data-i18n="t.of25">Qualified for stage II in both the theoretical and the experimental part.</p>
+          </li>
+          <li class="ev done">
+            <h3><span data-i18n="comp.mtf.name">Inter-school Physics Tournament</span> <span class="badge win" data-i18n="b.first">1st place</span></h3>
+            <p data-i18n="t.mtf">West Pomeranian Voivodeship.</p>
+          </li>
+        </ol>
+      </div>
     </section>
   </main>
 
-  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <footer>
+    <div class="wrap">
+      <span>© <span class="year"></span> Paweł Rejer</span>
+      <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

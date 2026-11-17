@@ -3,114 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paweł Rejer</title>
-  <meta name="description" content="Paweł Rejer — engineering, robotics, physics and building things.">
+  <title>Paweł Rejer — Engineering, Robotics, Physics</title>
+  <meta name="description" content="Paweł Rejer — building robots and software. EUROELEKTRA and AGH Diamond Index finalist.">
+  <meta property="og:title" content="Paweł Rejer">
+  <meta property="og:description" content="Engineering, robotics, physics — projects and achievements.">
+  <meta property="og:image" content="https://prejer.github.io/assets/manipulator/manipulator-12.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <a href="index.html" class="logo">PR</a>
-    <nav>
-      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-      <a href="projects.html" data-i18n="nav.projects">Projects</a>
-      <a href="competitions.html" data-i18n="nav.competitions">Competitions</a>
-      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="mark">PR</span><span>Paweł Rejer</span></a>
+      <nav>
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="competitions.html" data-i18n="nav.competitions">Achievements</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <h1>Paweł Rejer</h1>
-      <p class="lead" data-i18n="hero.lead">Final-year high-school student who likes to understand how things work — and then build them.</p>
-      <p class="tags" data-i18n="hero.tags">Robotics · Electrical engineering · Physics · Software</p>
+      <div class="wrap">
+        <div>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Robotics · Electrical engineering · Physics</p>
+          <h1>Paweł Rejer</h1>
+          <p class="lead" data-i18n="hero.lead">I design and build things that move — from robotic arms to software products. Olympiad finalist in electrical engineering and physics.</p>
+          <div class="btns">
+            <a class="btn primary" href="projects.html" data-i18n="hero.cta1">View projects →</a>
+            <a class="btn ghost" href="#contact" data-i18n="hero.cta2">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/manipulator/manipulator-12.jpg" alt="Three-joint robotic manipulator controlled from a laptop">
+          <div class="tag"><strong data-i18n="hero.tag.t">Three-joint manipulator</strong><span class="muted" data-i18n="hero.tag.d">Designed, built and programmed from scratch</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
-      <h2 data-i18n="about.title">About me</h2>
-      <p data-i18n="about.p1">I'm in my final year of secondary school, preparing for the matura and taking part in several science and engineering olympiads. Most of my free time goes into projects: a three-joint robotic manipulator I designed myself, and software tools that solve real problems.</p>
-      <p data-i18n="about.p2">Things I'm passionate about:</p>
-      <ul class="interests">
-        <li data-i18n="about.i1">Robotics and mechanical design</li>
-        <li data-i18n="about.i2">Electrical engineering and physics</li>
-        <li data-i18n="about.i3">Building software products — from idea to pitch</li>
-        <li data-i18n="about.i4">Learning languages (currently French)</li>
-        <li data-i18n="about.i5">The science behind training and exercise physiology</li>
-      </ul>
+    <!-- STATS -->
+    <section class="stats">
+      <div class="wrap">
+        <div class="stat"><b data-i18n="st.1.t">Finalist</b><span data-i18n="st.1.d">EUROELEKTRA — national electrical engineering olympiad</span></div>
+        <div class="stat"><b data-i18n="st.2.t">Finalist</b><span data-i18n="st.2.d">“Diamond Index” AGH Olympiad — Physics</span></div>
+        <div class="stat"><b data-i18n="st.3.t">1st place</b><span data-i18n="st.3.d">Inter-school Physics Tournament, West Pomerania</span></div>
+        <div class="stat"><b data-i18n="st.4.t">Scholar since 2022</b><span data-i18n="st.4.d">ZDOLNI Fund for gifted students</span></div>
+      </div>
     </section>
 
-    <section>
-      <h2 data-i18n="home.featured">Featured</h2>
-      <div class="cards">
-        <a class="card" href="manipulator.html">
-          <img src="assets/manipulator/thumbs/manipulator-12.jpg" alt="Three-joint robotic manipulator" loading="lazy">
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">01</p>
+          <h2 style="font-size:2rem;margin:0" data-i18n="about.title">About me</h2>
+        </div>
+        <div class="body">
+          <p data-i18n="about.p1">I'm a final-year high-school student who likes to understand how things work — and then build them.</p>
+          <p data-i18n="about.p2">I compete in olympiads in physics, electrical and mechanical engineering, and spend most of my free time on projects: a three-joint robotic manipulator I designed myself, and software tools that solve real problems for real teams.</p>
+          <ul class="chips" style="margin-top:1.5rem">
+            <li data-i18n="about.i1">Robotics</li>
+            <li data-i18n="about.i2">Mechanical design</li>
+            <li data-i18n="about.i3">Electrical engineering</li>
+            <li data-i18n="about.i4">Physics</li>
+            <li data-i18n="about.i5">Product building</li>
+            <li data-i18n="about.i6">Exercise physiology</li>
+            <li data-i18n="about.i7">Languages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">02</p><h2 data-i18n="projects.title">Projects</h2></div>
+          <p data-i18n="projects.lead">Hardware and software I design, build and ship — end to end.</p>
+        </div>
+        <a class="feature" href="manipulator.html">
+          <img src="assets/manipulator/manipulator-11.jpg" alt="Manipulator on its rotating base" loading="lazy">
           <div class="body">
+            <p class="eyebrow" style="margin:0" data-i18n="feat.label">Featured · Robotics</p>
             <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
-            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control.</p>
-            <span class="more" data-i18n="more.project">See the project →</span>
+            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control. Driven from my own Python application with a live 3D visualisation, talking to Arduino firmware.</p>
+            <ul class="chips"><li>Python</li><li>Arduino</li><li data-i18n="chip.steppers">Stepper motors</li><li data-i18n="chip.kin">Kinematics</li></ul>
+            <span class="more" data-i18n="more.project">Read the case study →</span>
           </div>
         </a>
-        <a class="card placeholder-img" href="competitions.html">
-          <div class="ph">🏅</div>
-          <div class="body">
-            <h3 data-i18n="comp.title">Olympiads &amp; competitions</h3>
-            <p data-i18n="comp.short">Physics, electrical and mechanical engineering — on a timeline.</p>
-            <span class="more" data-i18n="more.timeline">See the timeline →</span>
+        <div class="cards">
+          <div class="card">
+            <div class="media graphic">
+              <div class="orgo-viz"><i class="a w2"></i><i class="b"></i><i class="w3"></i><i class="b w3"></i><i class="c"></i><i class="a w2"></i><i></i><i class="a"></i><i class="b w2"></i><i class="c w2"></i><i class="w3"></i><i class="a w3"></i></div>
+            </div>
+            <div class="body">
+              <h3>OrgoMap</h3>
+              <p data-i18n="orgo.short">A Jira app giving managers a live, visual overview of the entire organisation — and one-click actions when something gets stuck.</p>
+              <ul class="chips"><li>Jira</li><li>Webhooks</li><li>SaaS</li></ul>
+            </div>
           </div>
-        </a>
-      </div>
-      <p style="margin-top:1.25rem"><a href="projects.html" data-i18n="more.allprojects">All projects →</a></p>
-    </section>
-
-    <section id="programs">
-      <h2 data-i18n="prog.title">Programmes</h2>
-      <ol class="timeline">
-        <li class="ev done">
-          <time data-i18n="prog.zdolni.when">2022 – present</time>
-          <h3 data-i18n="prog.zdolni.name">ZDOLNI Fund — scholarship holder</h3>
-        </li>
-        <li class="ev done">
-          <time data-i18n="prog.up.when">July – October 2026</time>
-          <h3>Szczecin UP</h3>
-          <p data-i18n="prog.up.desc">Carried out the CNow project as part of the programme.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="skills">
-      <h2 data-i18n="skills.title">Skills</h2>
-      <div class="skills">
-        <div>
-          <h3 data-i18n="skills.eng">Engineering</h3>
-          <p data-i18n="skills.eng.list">Electrical circuits · Mechanics &amp; mechanical design · Robotics</p>
-        </div>
-        <div>
-          <h3 data-i18n="skills.sw">Software</h3>
-          <p data-i18n="skills.sw.list">Web development · Jira apps · LaTeX</p>
-        </div>
-        <div>
-          <h3 data-i18n="skills.biz">Product</h3>
-          <p data-i18n="skills.biz.list">Market research · Pitching · Turning ideas into products</p>
-        </div>
-        <div>
-          <h3 data-i18n="skills.lang">Languages</h3>
-          <p data-i18n="skills.lang.list">Polish (native) · English · French (learning)</p>
+          <a class="card" href="projects.html">
+            <div class="media"><img src="assets/manipulator/thumbs/manipulator-04.jpg" alt="" loading="lazy"></div>
+            <div class="body">
+              <h3 data-i18n="more.all.t">All projects</h3>
+              <p data-i18n="more.all.d">Details, tech stack and progress of everything I'm working on.</p>
+              <span class="more" data-i18n="more.allprojects">Browse projects →</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2 data-i18n="contact.title">Contact</h2>
-      <p data-i18n="contact.p">Want to talk about a project, a collaboration or anything engineering? Reach out.</p>
-      <ul class="contact">
-        <li><a href="mailto:p.rejer10@gmail.com">p.rejer10@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
+    <!-- ACHIEVEMENTS -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">03</p><h2 data-i18n="comp.title">Achievements</h2></div>
+          <p data-i18n="comp.homelead">Olympiads and competitions in physics, electrical and mechanical engineering.</p>
+        </div>
+        <div class="ach">
+          <div class="item"><div class="ico">⚡</div><div><h3 data-i18n="ach.1.t">EUROELEKTRA — Finalist</h3><p data-i18n="ach.1.d">National electrical engineering olympiad · 2025/26</p></div></div>
+          <div class="item"><div class="ico">◆</div><div><h3 data-i18n="ach.2.t">AGH Diamond Index — Finalist</h3><p data-i18n="ach.2.d">Physics · 2025/26</p></div></div>
+          <div class="item"><div class="ico">II</div><div><h3 data-i18n="ach.3.t">Polish Physics Olympiad — Stage II</h3><p data-i18n="ach.3.d">Theoretical and experimental part · 2025/26</p></div></div>
+          <div class="item"><div class="ico">#1</div><div><h3 data-i18n="ach.4.t">Inter-school Physics Tournament — 1st place</h3><p data-i18n="ach.4.d">West Pomeranian Voivodeship · 2025/26</p></div></div>
+        </div>
+        <p style="margin-top:1.75rem"><a class="btn ghost" href="competitions.html" data-i18n="more.timeline">Full timeline →</a></p>
+      </div>
+    </section>
+
+    <!-- PROGRAMMES -->
+    <section class="section alt" id="programs">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">04</p><h2 data-i18n="prog.title">Programmes</h2></div>
+          <p data-i18n="prog.lead">Programmes and scholarships I'm part of.</p>
+        </div>
+        <div class="prog">
+          <div class="item">
+            <time data-i18n="prog.zdolni.when">2022 – present</time>
+            <h3 data-i18n="prog.zdolni.name">ZDOLNI Fund</h3>
+            <p data-i18n="prog.zdolni.desc">Scholarship holder of the fund supporting gifted students.</p>
+          </div>
+          <div class="item">
+            <time data-i18n="prog.up.when">July – October 2026</time>
+            <h3>Szczecin UP</h3>
+            <p data-i18n="prog.up.desc">Carried out the CNow project as part of the programme.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">05</p><h2 data-i18n="skills.title">Skills</h2></div>
+          <p data-i18n="skills.lead">What I work with.</p>
+        </div>
+        <div class="skills">
+          <div class="skill"><h3 data-i18n="skills.eng">Engineering</h3><ul class="chips"><li data-i18n="sk.e1">Electrical circuits</li><li data-i18n="sk.e2">Mechanical design</li><li data-i18n="sk.e3">Robotics</li><li data-i18n="sk.e4">Stepper motor control</li></ul></div>
+          <div class="skill"><h3 data-i18n="skills.sw">Software</h3><ul class="chips"><li>Python</li><li>Arduino</li><li data-i18n="sk.s3">Web development</li><li data-i18n="sk.s4">Jira apps</li><li>LaTeX</li></ul></div>
+          <div class="skill"><h3 data-i18n="skills.biz">Product</h3><ul class="chips"><li data-i18n="sk.b1">Market research</li><li data-i18n="sk.b2">Pitching</li><li data-i18n="sk.b3">Idea to product</li></ul></div>
+          <div class="skill"><h3 data-i18n="skills.lang">Languages</h3><ul class="chips"><li data-i18n="sk.l1">Polish — native</li><li data-i18n="sk.l2">English</li><li data-i18n="sk.l3">French — learning</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" style="padding-top:0">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <h2 data-i18n="contact.title">Let's talk</h2>
+            <p data-i18n="contact.p">Open to conversations about projects, collaboration and opportunities in engineering and technology.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:p.rejer10@gmail.com"><span>p.rejer10@gmail.com</span><small>Email</small></a>
+            <a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener"><span>pawel-rejer</span><small>LinkedIn</small></a>
+            <a href="https://github.com/prejer" target="_blank" rel="noopener"><span>prejer</span><small>GitHub</small></a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <footer>
+    <div class="wrap">
+      <span>© <span class="year"></span> Paweł Rejer</span>
+      <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

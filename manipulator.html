@@ -3,60 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Three-joint manipulator — Paweł Rejer</title>
+  <title>Three-joint robotic manipulator — Paweł Rejer</title>
+  <meta name="description" content="A three-joint robotic arm designed and built from scratch, controlled from a Python app with live 3D visualisation and Arduino firmware.">
+  <meta property="og:image" content="https://prejer.github.io/assets/manipulator/manipulator-11.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <a href="index.html" class="logo">PR</a>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
-      <a href="competitions.html" data-i18n="nav.competitions">Competitions</a>
-      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-    <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="mark">PR</span><span>Paweł Rejer</span></a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+        <a href="competitions.html" data-i18n="nav.competitions">Achievements</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    </div>
   </header>
 
   <main>
     <section class="page-head">
-      <a class="back" href="projects.html" data-i18n="back.projects">← All projects</a>
-      <h1 data-i18n="manip.title">Three-joint robotic manipulator</h1>
-      <p class="lead" data-i18n="manip.desc">A robotic arm with three joints that I designed and built myself — mechanics, electronics and control. The project is still evolving: I keep iterating on the design and fixing what testing reveals.</p>
-      <dl class="facts">
-        <div><dt data-i18n="f.joints">Joints</dt><dd>3</dd></div>
-        <div><dt data-i18n="f.drive">Drive</dt><dd data-i18n="f.drive.v">Stepper motors, belts</dd></div>
-        <div><dt data-i18n="f.base">Base</dt><dd data-i18n="f.base.v">Rotating turntable</dd></div>
-        <div><dt data-i18n="f.status">Status</dt><dd data-i18n="f.status.v">In progress</dd></div>
-      </dl>
-      <img class="hero-img zoom" src="assets/manipulator/manipulator-12.jpg" alt="The manipulator on its stand, controlled from a laptop">
+      <div class="wrap">
+        <div class="crumbs"><a href="projects.html" data-i18n="nav.projects">Projects</a> / <span data-i18n="crumb.manip">Manipulator</span></div>
+        <h1 data-i18n="manip.title">Three-joint robotic manipulator</h1>
+        <p class="lead" data-i18n="manip.desc">A robotic arm with three joints that I designed and built myself — mechanics, electronics and control software. It is driven from my own Python application with a live 3D model of the arm, which sends commands to Arduino firmware running the stepper motors.</p>
+        <ul class="chips"><li>Python</li><li>Arduino IDE</li><li data-i18n="chip.steppers">Stepper motors</li><li data-i18n="chip.belts">Belt drives</li><li data-i18n="chip.kin">Kinematics</li><li data-i18n="chip.3d">3D visualisation</li></ul>
+        <dl class="facts">
+          <div><dt data-i18n="f.joints">Degrees of freedom</dt><dd>3</dd></div>
+          <div><dt data-i18n="f.drive">Drive</dt><dd data-i18n="f.drive.v">Steppers + belts</dd></div>
+          <div><dt data-i18n="f.ctrl">Control</dt><dd>Python ↔ Arduino</dd></div>
+          <div><dt data-i18n="f.status">Status</dt><dd data-i18n="f.status.v">Active development</dd></div>
+        </dl>
+      </div>
     </section>
 
-    <section>
-      <h2 data-i18n="video.title">Video</h2>
-      <video class="demo" src="assets/manipulator/demo.mp4" poster="assets/manipulator/demo-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+    <!-- DEMO -->
+    <section class="section">
+      <div class="wrap demo-grid">
+        <video class="demo" src="assets/manipulator/demo.mp4" poster="assets/manipulator/demo-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+        <div>
+          <p class="eyebrow" data-i18n="demo.label">Demo</p>
+          <h2 data-i18n="demo.title">The arm follows its digital twin</h2>
+          <p data-i18n="demo.p">In the video the physical arm moves together with its 3D model in my control application. The app shows the current angle of every joint and the position of the end effector in real time.</p>
+          <ul>
+            <li data-i18n="demo.l1">Live 3D model of the arm and its workspace</li>
+            <li data-i18n="demo.l2">Joint angles and end-effector position on screen</li>
+            <li data-i18n="demo.l3">Keyboard control of the arm, connection to the controller over USB</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2 data-i18n="log.title">Build log</h2>
-      <ol class="log">
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-01.jpg" data-full="assets/manipulator/manipulator-01.jpg" alt="" loading="lazy"><div><time>08.11.2026</time><p data-i18n="log.01">First stepper motor mounted under a base plate.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-02.jpg" data-full="assets/manipulator/manipulator-02.jpg" alt="" loading="lazy"><div><time>10.11.2026</time><p data-i18n="log.02">Belt drive — pulley and belt transferring motion from the motor.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-03.jpg" data-full="assets/manipulator/manipulator-03.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.03">Shoulder bracket on its base plate, with motors and pulleys waiting to be fitted.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-04.jpg" data-full="assets/manipulator/manipulator-04.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.04">Shoulder assembled: two stepper motors driving the joints through belts.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-05.jpg" data-full="assets/manipulator/manipulator-05.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.05">First arm link attached.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-06.jpg" data-full="assets/manipulator/manipulator-06.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.06">Arm standing and wired up to the controller board.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-07.jpg" data-full="assets/manipulator/manipulator-07.jpg" alt="" loading="lazy"><div><time>14.11.2026</time><p data-i18n="log.07">First motion tests, controlled from the laptop.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-08.jpg" data-full="assets/manipulator/manipulator-08.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.08">New base plate with the motor for the rotation joint.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-09.jpg" data-full="assets/manipulator/manipulator-09.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.09">Full arm with both links in place.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-10.jpg" data-full="assets/manipulator/manipulator-10.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.10">Turntable bearing for rotating the whole arm.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-11.jpg" data-full="assets/manipulator/manipulator-11.jpg" alt="" loading="lazy"><div><time>15.11.2026</time><p data-i18n="log.11">Arm mounted on the rotating base — all three joints together.</p></div></li>
-        <li><img class="zoom" src="assets/manipulator/thumbs/manipulator-12.jpg" data-full="assets/manipulator/manipulator-12.jpg" alt="" loading="lazy"><div><time>16.11.2026</time><p data-i18n="log.12">The manipulator on its stand, controlled from the laptop.</p></div></li>
-      </ol>
+    <!-- HOW IT WORKS -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow" data-i18n="tech.label">Technical overview</p><h2 data-i18n="tech.title">How it works</h2></div>
+          <p data-i18n="tech.lead">The system is split into a high-level application on the computer and low-level firmware on the microcontroller.</p>
+        </div>
+        <div class="pipeline">
+          <div class="step">
+            <h3 data-i18n="p1.t">Control app</h3>
+            <p data-i18n="p1.d">Python application: user input, 3D model of the arm, computing joint angles from the arm's geometry.</p>
+            <ul class="chips"><li>Python</li></ul>
+          </div>
+          <div class="step">
+            <h3 data-i18n="p2.t">Communication</h3>
+            <p data-i18n="p2.d">Target joint angles are sent to the microcontroller over a USB serial connection.</p>
+            <ul class="chips"><li>USB serial</li></ul>
+          </div>
+          <div class="step">
+            <h3 data-i18n="p3.t">Firmware</h3>
+            <p data-i18n="p3.d">Arduino firmware converts angles into step sequences and drives the stepper motor drivers.</p>
+            <ul class="chips"><li>Arduino IDE</li><li>C++</li></ul>
+          </div>
+          <div class="step">
+            <h3 data-i18n="p4.t">Mechanics</h3>
+            <p data-i18n="p4.d">Stepper motors move the joints through belt drives; the whole arm rotates on a turntable bearing.</p>
+            <ul class="chips"><li data-i18n="chip.steppers">Stepper motors</li><li data-i18n="chip.belts">Belt drives</li></ul>
+          </div>
+        </div>
+        <div class="stack">
+          <div>
+            <h3 data-i18n="s1.t">Mechanical design</h3>
+            <ul class="chips"><li data-i18n="s1.1">3 revolute joints</li><li data-i18n="s1.2">Belt reduction</li><li data-i18n="s1.3">Turntable base</li><li data-i18n="s1.4">Custom-designed parts</li></ul>
+          </div>
+          <div>
+            <h3 data-i18n="s2.t">Electronics</h3>
+            <ul class="chips"><li data-i18n="s2.1">Microcontroller board</li><li data-i18n="s2.2">Stepper drivers</li><li data-i18n="s2.3">Dedicated power supply</li></ul>
+          </div>
+          <div>
+            <h3 data-i18n="s3.t">Software</h3>
+            <ul class="chips"><li>Python</li><li>Arduino IDE</li><li data-i18n="s3.1">Kinematics</li><li data-i18n="s3.2">3D visualisation</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILD LOG -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow" data-i18n="log.label">Process</p><h2 data-i18n="log.title">Build log</h2></div>
+          <p data-i18n="log.lead">From the first motor mount to a working arm — click a photo to enlarge.</p>
+        </div>
+        <ol class="log">
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-01.jpg" data-full="assets/manipulator/manipulator-01.jpg" alt="" loading="lazy"><figcaption><time>08.11.2026</time><span data-i18n="log.01">First stepper motor mounted under a base plate.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-02.jpg" data-full="assets/manipulator/manipulator-02.jpg" alt="" loading="lazy"><figcaption><time>10.11.2026</time><span data-i18n="log.02">Belt drive — pulley and belt transferring motion from the motor.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-03.jpg" data-full="assets/manipulator/manipulator-03.jpg" alt="" loading="lazy"><figcaption><time>14.11.2026</time><span data-i18n="log.03">Shoulder bracket on its base plate, with motors and pulleys waiting to be fitted.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-04.jpg" data-full="assets/manipulator/manipulator-04.jpg" alt="" loading="lazy"><figcaption><time>14.11.2026</time><span data-i18n="log.04">Shoulder assembled: two stepper motors driving the joints through belts.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-05.jpg" data-full="assets/manipulator/manipulator-05.jpg" alt="" loading="lazy"><figcaption><time>14.11.2026</time><span data-i18n="log.05">First arm link attached.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-06.jpg" data-full="assets/manipulator/manipulator-06.jpg" alt="" loading="lazy"><figcaption><time>14.11.2026</time><span data-i18n="log.06">Arm standing and wired up to the controller board.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-07.jpg" data-full="assets/manipulator/manipulator-07.jpg" alt="" loading="lazy"><figcaption><time>14.11.2026</time><span data-i18n="log.07">First motion tests, controlled from the laptop.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-08.jpg" data-full="assets/manipulator/manipulator-08.jpg" alt="" loading="lazy"><figcaption><time>15.11.2026</time><span data-i18n="log.08">New base plate with the motor for the rotation joint.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-09.jpg" data-full="assets/manipulator/manipulator-09.jpg" alt="" loading="lazy"><figcaption><time>15.11.2026</time><span data-i18n="log.09">Full arm with both links in place.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-10.jpg" data-full="assets/manipulator/manipulator-10.jpg" alt="" loading="lazy"><figcaption><time>15.11.2026</time><span data-i18n="log.10">Turntable bearing for rotating the whole arm.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-11.jpg" data-full="assets/manipulator/manipulator-11.jpg" alt="" loading="lazy"><figcaption><time>15.11.2026</time><span data-i18n="log.11">Arm mounted on the rotating base — all three joints together.</span></figcaption></figure></li>
+          <li><figure><img class="zoom" src="assets/manipulator/thumbs/manipulator-12.jpg" data-full="assets/manipulator/manipulator-12.jpg" alt="" loading="lazy"><figcaption><time>16.11.2026</time><span data-i18n="log.12">The manipulator on its stand, controlled from the laptop.</span></figcaption></figure></li>
+        </ol>
+      </div>
     </section>
   </main>
 
-  <footer><p>© <span class="year"></span> Paweł Rejer</p></footer>
+  <footer>
+    <div class="wrap">
+      <span>© <span class="year"></span> Paweł Rejer</span>
+      <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/prejer" target="_blank" rel="noopener">GitHub</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
