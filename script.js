@@ -1,3 +1,22 @@
+// ---------------------------------------------------------------------
+// Always show the newest version: re-download this page bypassing the
+// browser cache; if the version stamp changed, reload once.
+// ---------------------------------------------------------------------
+(function () {
+  const meta = document.querySelector('meta[name="site-version"]');
+  if (!meta || location.protocol === "file:") return;
+  fetch(location.href, { cache: "reload" })
+    .then(r => r.text())
+    .then(html => {
+      const m = html.match(/name="site-version" content="(\d+)"/);
+      if (!m || m[1] === meta.content) return;
+      const key = "reloaded-" + m[1];
+      try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, "1"); } catch (e) {}
+      location.reload();
+    })
+    .catch(() => {});
+})();
+
 // =====================================================================
 // Polish translations. English text lives directly in the HTML files;
 // every element with data-i18n="key" is swapped for pl[key] in Polish.
