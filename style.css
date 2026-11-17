@@ -319,3 +319,6 @@ footer a { color: var(--muted); }
   .stat { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--line) !important; }
   .stat:first-child { border-top: none !important; }
 }
+
+.contact-links .ci { display: inline-flex; align-items: center; gap: .6rem; }
+.contact-links svg { flex: none; opacity: .85; }
