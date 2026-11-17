@@ -106,6 +106,9 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
   padding: .7rem .95rem; box-shadow: 0 10px 30px rgba(15,23,42,.12);
   font-size: .85rem; max-width: 240px;
 }
+.hero-media a.tag { color: inherit; display: block; transition: transform .15s; }
+.hero-media a.tag:hover { text-decoration: none; transform: translateY(-2px); }
+.hero-media .tag span { display: block; }
 .hero-media .tag strong { display: block; color: var(--ink); font-size: .9rem; }
 
 /* ---------- stats ---------- */

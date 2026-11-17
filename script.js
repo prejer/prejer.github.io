@@ -39,6 +39,8 @@ const pl = {
   "hero.lead": "Projektuję i buduję rzeczy, które się ruszają — od ramion robotycznych po produkty software'owe. Finalista olimpiad z elektrotechniki i fizyki.",
   "hero.cta1": "Zobacz projekty →",
   "hero.cta2": "Skontaktuj się",
+  "hero.tag.t2": "Aktualnie buduję",
+  "hero.tag.d2": "Manipulator trójprzegubowy →",
   "hero.tag.t": "Manipulator trójprzegubowy",
   "hero.tag.d": "Zaprojektowany, zbudowany i zaprogramowany od zera",
 
