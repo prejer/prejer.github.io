@@ -54,7 +54,6 @@ const pl = {
   "f.status": "Status",
   "f.status.v": "W trakcie",
   "video.title": "Film",
-  "video.soon": "Film już wkrótce.",
   "log.title": "Dziennik budowy",
   "log.01": "Pierwszy silnik krokowy zamontowany pod płytą bazową.",
   "log.02": "Przekładnia pasowa — koło pasowe i pasek przenoszą ruch z silnika.",
