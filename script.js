@@ -190,7 +190,7 @@ const pl = {
   // slabaxis
   "sx.label": "SaaS · 2026",
   "sx.short": "Mój pierwszy SaaS B2C — układasz komponenty w przeglądarce i dostajesz płytkę do druku 3D: gotowe „pseudo-PCB” z opisami i grafiką.",
-  "sx.desc": "Mój pierwszy SaaS B2C: platforma internetowa do budowania prostej elektroniki bez projektowania PCB. Układasz komponenty w przeglądarce, a platforma generuje model 3D płytki montażowej — drukujesz ją, wkładasz elementy i masz gotowe „pseudo-PCB” z wbudowanymi opisami i grafiką.",
+  "sx.desc": "Mój pierwszy SaaS B2C: platforma internetowa do budowania prostej elektroniki bez projektowania PCB. Układało się komponenty w przeglądarce, a platforma generowała model 3D płytki montażowej — wystarczyło ją wydrukować, włożyć elementy i było gotowe „pseudo-PCB” z wbudowanymi opisami i grafiką. Projekt jest już zamknięty, nie rozwijam go dalej.",
   "sx.c1": "Aplikacja webowa",
   "sx.c2": "Generowanie modeli 3D",
   "sx.c3": "Elektronika",
@@ -200,6 +200,7 @@ const pl = {
   "sx.out": "Efekt",
   "sx.out.v": "Płytka do druku 3D",
   "sx.role.v": "Założyciel · produkt",
+  "sx.status.v": "Projekt zamknięty",
   "sx.lead": "Od pomysłu do działającego układu bez zamawiania PCB i lutowania na płytce uniwersalnej.",
   "sx.s1.t": "Ułóż",
   "sx.s1.d": "Wybierz komponenty z biblioteki i rozmieść je na płytce w edytorze w przeglądarce; dodaj tekst i logo.",
