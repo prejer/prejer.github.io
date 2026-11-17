@@ -159,7 +159,7 @@ const pl = {
   // autocam
   "ac.label": "Robotyka · 2025",
   "ac.short": "Robot mobilny na kołach mecanum z obrotową wieżyczką i ramieniem na serwie — zaprojektowany i zbudowany od zera w pięć dni.",
-  "ac.desc": "Robot mobilny na kołach mecanum z obrotową wieżyczką i ramieniem napędzanym serwem. Zaprojektowałem i zbudowałem go w pięć dni — podwozie ze sklejki z drukowanymi częściami, napęd wielokierunkowy i elektronika w zdejmowanym schowku.",
+  "ac.desc": "Robot mobilny na kołach mecanum z obrotową wieżyczką i ramieniem napędzanym serwem. Zaprojektowałem i zbudowałem go w pięć dni — podwozie ze sklejki z drukowanymi częściami, napęd wielokierunkowy i elektronika oparta na ESP32 w zdejmowanym schowku.",
   "ac.c1": "Koła mecanum",
   "ac.c2": "Napęd wielokierunkowy",
   "ac.c3": "Serwo",
@@ -172,8 +172,10 @@ const pl = {
   "ac.glabel": "Zdjęcia",
   "ac.gtitle": "Robot",
   "log.lead2": "Kliknij zdjęcie, żeby je powiększyć.",
-  "ac.p1": "Podwozie na kołach mecanum z obrotową wieżyczką i ramieniem na serwie.",
-  "ac.p2": "Schowek na elektronikę pod zdejmowanym blatem: przetwornica i płytki prototypowe.",
+  "ac.p1": "Zmontowany robot: podwozie na kołach mecanum z obrotową wieżyczką i ramieniem na serwie.",
+  "ac.p2": "Schowek na elektronikę pod zdejmowanym blatem.",
+  "ac.p3": "Montaż elektroniki w warsztacie — mikrokontroler ESP32, przetwornica i płytki prototypowe.",
+  "ac.p4": "Podwozie spakowane do transportu, obok na stanowisku moduł wieżyczki.",
 
   // achievements
   "comp.title": "Osiągnięcia",
