@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="site-version" content="20261117123319">
+  <meta name="site-version" content="20261117123659">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Paweł Rejer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261117123319">
+  <link rel="stylesheet" href="style.css?v=20261117123659">
 </head>
 <body>
   <header class="topbar">
@@ -36,46 +36,58 @@
 
     <section class="section alt">
       <div class="wrap">
-        <a class="feature" href="manipulator.html">
-          <img src="assets/manipulator/manipulator-11.jpg" alt="Manipulator on its rotating base" loading="lazy">
-          <div class="body">
-            <p class="eyebrow" style="margin:0" data-i18n="feat.label2">Robotics · 2026</p>
-            <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
-            <p data-i18n="manip.short">A robotic arm I designed and built from scratch — mechanics, electronics and control. Driven from my own Python application with a live 3D visualisation, talking to Arduino firmware.</p>
-            <ul class="chips"><li>Python</li><li>Arduino</li><li data-i18n="chip.steppers">Stepper motors</li><li data-i18n="chip.kin">Kinematics</li></ul>
-            <span class="more" data-i18n="more.project">Read the case study →</span>
-          </div>
-        </a>
-        <a class="feature reverse" href="slabaxis.html" style="margin-top:1.25rem">
-          <img src="assets/slabaxis/slabaxis-01.jpg" alt="Slabaxis — printed board next to the editor" loading="lazy">
-          <div class="body">
-            <p class="eyebrow" style="margin:0" data-i18n="sx.label">SaaS · 2026</p>
-            <h3>Slabaxis</h3>
-            <p data-i18n="sx.short">My first B2C SaaS — arrange components in the browser and get a 3D-printable board: a ready "pseudo-PCB" with labels and graphics.</p>
-            <ul class="chips"><li>SaaS</li><li data-i18n="sx.c2">3D model generation</li><li data-i18n="sx.c3">Electronics</li></ul>
-            <span class="more" data-i18n="more.project">Read the case study →</span>
-          </div>
-        </a>
-        <a class="feature" href="notes-stand.html" style="margin-top:1.25rem">
-          <img src="assets/stand/stand-08.jpg" alt="Desk note stand" loading="lazy" style="object-position:center 40%">
-          <div class="body">
-            <p class="eyebrow" style="margin:0" data-i18n="stand.label">Product design · 2026</p>
-            <h3 data-i18n="stand.title">Desk note stand</h3>
-            <p data-i18n="stand.short">A desk stand for reusable magnetic dry-erase notes — modelled in Fusion 360, 3D-printed and taken from prototype to a ready product.</p>
-            <ul class="chips"><li>Fusion 360</li><li data-i18n="chip.3dp">3D printing</li><li data-i18n="chip.cad">Product design</li></ul>
-            <span class="more" data-i18n="more.project">Read the case study →</span>
-          </div>
-        </a>
-        <a class="feature reverse" href="autocam.html" style="margin-top:1.25rem">
-          <img src="assets/autocam/autocam-03.jpg" alt="AUTOCAM mecanum-wheel robot" loading="lazy" style="object-position:center 55%">
-          <div class="body">
-            <p class="eyebrow" style="margin:0" data-i18n="ac.label">Robotics · 2025</p>
-            <h3>AUTOCAM</h3>
-            <p data-i18n="ac.short">A camera robot on mecanum wheels designed to track your face and follow you — chassis, drive, turret and ESP32 firmware built from scratch in five days.</p>
-            <ul class="chips"><li data-i18n="ac.c1">Mecanum wheels</li><li>ESP32</li><li data-i18n="chip.3dp">3D printing</li></ul>
-            <span class="more" data-i18n="more.project">Read the case study →</span>
-          </div>
-        </a>
+        <ol class="ptl">
+          <li class="pt-year">2026</li>
+          <li class="pt-item">
+            <a class="pt-card" href="manipulator.html">
+              <img src="assets/manipulator/thumbs/manipulator-11.jpg" alt="" loading="lazy">
+              <div class="pt-body">
+                <div class="pt-meta"><time data-i18n="manip.date">Nov 2026</time> · <span data-i18n="feat.cat.robo">Robotics</span></div>
+                <h3 data-i18n="manip.title">Three-joint robotic manipulator</h3>
+                <p data-i18n="manip.tl">A robotic arm built from scratch, controlled from my own Python app with a live 3D model and Arduino firmware.</p>
+                <ul class="chips"><li>Python</li><li>Arduino</li><li data-i18n="chip.steppers">Stepper motors</li></ul>
+              </div>
+              <span class="pt-arrow">→</span>
+            </a>
+          </li>
+          <li class="pt-item">
+            <a class="pt-card" href="slabaxis.html">
+              <img src="assets/slabaxis/thumbs/slabaxis-01.jpg" alt="" loading="lazy">
+              <div class="pt-body">
+                <div class="pt-meta"><time data-i18n="sx.date">Jun 2026</time> · <span data-i18n="feat.cat.saas">SaaS</span></div>
+                <h3>Slabaxis</h3>
+                <p data-i18n="sx.tl">My first B2C SaaS — arrange components in the browser, get a 3D-printable "pseudo-PCB".</p>
+                <ul class="chips"><li>SaaS</li><li data-i18n="sx.c2">3D model generation</li></ul>
+              </div>
+              <span class="pt-arrow">→</span>
+            </a>
+          </li>
+          <li class="pt-item">
+            <a class="pt-card" href="notes-stand.html">
+              <img src="assets/stand/thumbs/stand-08.jpg" alt="" loading="lazy">
+              <div class="pt-body">
+                <div class="pt-meta"><time data-i18n="stand.date">Apr 2026</time> · <span data-i18n="feat.cat.prod">Product design</span></div>
+                <h3 data-i18n="stand.title">Desk note stand</h3>
+                <p data-i18n="stand.tl">A desk stand for magnetic dry-erase notes — taken from Fusion 360 model to a ready product.</p>
+                <ul class="chips"><li>Fusion 360</li><li data-i18n="chip.3dp">3D printing</li></ul>
+              </div>
+              <span class="pt-arrow">→</span>
+            </a>
+          </li>
+          <li class="pt-year">2025</li>
+          <li class="pt-item">
+            <a class="pt-card" href="autocam.html">
+              <img src="assets/autocam/thumbs/autocam-03.jpg" alt="" loading="lazy">
+              <div class="pt-body">
+                <div class="pt-meta"><time data-i18n="ac.date">Sep 2025</time> · <span data-i18n="feat.cat.robo">Robotics</span></div>
+                <h3>AUTOCAM</h3>
+                <p data-i18n="ac.tl">A face-tracking camera robot on mecanum wheels, built in five days on an ESP32.</p>
+                <ul class="chips"><li data-i18n="ac.c1">Mecanum wheels</li><li>ESP32</li></ul>
+              </div>
+              <span class="pt-arrow">→</span>
+            </a>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
@@ -86,6 +98,6 @@
       <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
     </div>
   </footer>
-  <script src="script.js?v=20261117123319"></script>
+  <script src="script.js?v=20261117123659"></script>
 </body>
 </html>

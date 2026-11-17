@@ -61,7 +61,6 @@ const pl = {
   "about.i3": "Elektrotechnika",
   "about.i4": "Fizyka",
   "about.i5": "Budowanie produktów",
-  "about.i6": "Fizjologia wysiłku",
   "about.i7": "Języki obce",
 
   // projects
@@ -213,6 +212,19 @@ const pl = {
   "sx.p1": "Z edytora do rzeczywistości: płytka zaprojektowana na platformie obok wydrukowanego efektu.",
   "sx.p2": "Wskaźnik temperatury: termistor, dioda LED i Arduino Nano na wydrukowanej płytce z opisem i grafiką.",
   "sx.p3": "PiezoPAD: trzy czujniki piezo sterujące diodami przez tranzystory, z przełącznikiem — wszystko trzymane przez wydrukowaną płytkę.",
+
+  // projects timeline
+  "feat.cat.robo": "Robotyka",
+  "feat.cat.saas": "SaaS",
+  "feat.cat.prod": "Projektowanie produktu",
+  "manip.date": "Lis 2026",
+  "sx.date": "Cze 2026",
+  "stand.date": "Kwi 2026",
+  "ac.date": "Wrz 2025",
+  "manip.tl": "Ramię robotyczne zbudowane od zera, sterowane z mojej aplikacji w Pythonie z modelem 3D na żywo i firmware'em na Arduino.",
+  "sx.tl": "Mój pierwszy SaaS B2C — układasz komponenty w przeglądarce, dostajesz „pseudo-PCB” do druku 3D.",
+  "stand.tl": "Stojak na magnetyczne notatki suchościeralne — od modelu w Fusion 360 do gotowego produktu.",
+  "ac.tl": "Robot z kamerą na kołach mecanum, który miał śledzić twarz — zbudowany w pięć dni na ESP32.",
 
   // achievements
   "comp.title": "Osiągnięcia",

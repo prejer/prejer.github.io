@@ -325,3 +325,38 @@ footer a { color: var(--muted); }
 
 .contact-links .ci { display: inline-flex; align-items: center; gap: .6rem; }
 .contact-links svg { flex: none; opacity: .85; }
+
+/* ---------- projects timeline ---------- */
+.ptl { list-style: none; padding: 0; margin: 0; position: relative; }
+.ptl::before { content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+.pt-year { position: relative; padding: 1.6rem 0 .7rem 2.75rem; font: 600 .8rem var(--mono); letter-spacing: .1em; color: var(--ink); }
+.pt-year:first-child { padding-top: 0; }
+.pt-item { position: relative; margin: 0 0 .75rem 2.75rem; }
+.pt-item::before {
+  content: ""; position: absolute; left: -2.75rem; top: 50%; transform: translateY(-50%); margin-left: 2px;
+  width: 16px; height: 16px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.pt-card {
+  display: grid; grid-template-columns: 168px 1fr auto; gap: 1.25rem; align-items: center;
+  background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: .6rem; color: inherit;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.pt-card:hover { text-decoration: none; transform: translateX(3px); box-shadow: 0 12px 28px -16px rgba(15,23,42,.3); border-color: #cbd5e1; }
+.pt-card img { width: 168px; height: 112px; object-fit: cover; border-radius: 8px; display: block; background: var(--soft-2); }
+.pt-body { min-width: 0; }
+.pt-meta { font: 500 .72rem var(--mono); color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem; }
+.pt-body h3 { margin: 0 0 .25rem; font-size: 1.08rem; }
+.pt-body p { margin: 0 0 .55rem; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+.pt-body .chips li { font-size: .74rem; padding: .15rem .55rem; }
+.pt-arrow { color: var(--muted); font-size: 1.2rem; padding-right: 1rem; transition: color .15s, transform .15s; }
+.pt-card:hover .pt-arrow { color: var(--accent); transform: translateX(3px); }
+@media (max-width: 600px) {
+  .pt-card { grid-template-columns: 96px 1fr; gap: .9rem; }
+  .pt-card img { width: 96px; height: 96px; }
+  .pt-arrow, .pt-body .chips { display: none; }
+  .pt-body p { font-size: .85rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .ptl::before { left: 5px; }
+  .pt-item { margin-left: 1.6rem; }
+  .pt-item::before { left: -1.6rem; width: 12px; height: 12px; margin-left: 0; }
+  .pt-year { padding-left: 1.6rem; }
+}
