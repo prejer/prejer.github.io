@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="site-version" content="20261117122602">
+  <meta name="site-version" content="20261117122805">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUTOCAM — Paweł Rejer</title>
-  <meta name="description" content="AUTOCAM — a mobile robot on mecanum wheels, designed and built in 5 days by Paweł Rejer.">
+  <meta name="description" content="AUTOCAM — a camera robot meant to track a face and follow a person, on mecanum wheels, designed and built in 5 days by Paweł Rejer.">
   <meta property="og:image" content="https://prejer.github.io/assets/autocam/autocam-03.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261117122602">
+  <link rel="stylesheet" href="style.css?v=20261117122805">
 </head>
 <body>
   <header class="topbar">
@@ -32,14 +32,28 @@
       <div class="wrap">
         <div class="crumbs"><a href="projects.html" data-i18n="nav.projects">Projects</a> / <span>AUTOCAM</span></div>
         <h1>AUTOCAM</h1>
-        <p class="lead" data-i18n="ac.desc">A mobile robot on mecanum wheels, with a rotating turret and a servo-driven arm on top. I designed and built it in five days — a plywood chassis with 3D-printed parts, omnidirectional drive and ESP32-based electronics inside a removable compartment.</p>
-        <ul class="chips"><li data-i18n="ac.c1">Mecanum wheels</li><li data-i18n="ac.c2">Omnidirectional drive</li><li data-i18n="chip.3dp">3D printing</li><li>ESP32</li><li data-i18n="ac.c3">Servo</li><li data-i18n="chip.proto">Prototyping</li></ul>
+        <p class="lead" data-i18n="ac.desc">A camera robot designed to track a person's face and follow them around. I designed and built it in five days — a plywood chassis with 3D-printed parts, omnidirectional mecanum drive, a rotating turret with a servo-driven arm, and an ESP32 running my own firmware.</p>
+        <ul class="chips"><li data-i18n="ac.c4">Face tracking</li><li data-i18n="ac.c1">Mecanum wheels</li><li data-i18n="ac.c2">Omnidirectional drive</li><li data-i18n="chip.3dp">3D printing</li><li>ESP32</li><li data-i18n="ac.c3">Servo</li><li data-i18n="chip.proto">Prototyping</li></ul>
         <dl class="facts">
           <div><dt data-i18n="sf.when">When</dt><dd data-i18n="ac.when">September 2025</dd></div>
           <div><dt data-i18n="ac.time">Build time</dt><dd data-i18n="ac.time.v">5 days</dd></div>
           <div><dt data-i18n="sf.mat">Materials</dt><dd data-i18n="ac.mat.v">Plywood, printed parts</dd></div>
           <div><dt data-i18n="ac.drive">Drive</dt><dd data-i18n="ac.drive.v">4 × mecanum wheels</dd></div>
         </dl>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow" data-i18n="ac.glabel2">Goal &amp; outcome</p><h2 data-i18n="ac.gtitle2">What it was meant to do</h2></div>
+          <p data-i18n="ac.glead">An ambitious five-day build: a robot that keeps a person in frame without anyone operating it.</p>
+        </div>
+        <div class="pipeline" style="grid-template-columns:repeat(3,1fr)">
+          <div class="step"><h3 data-i18n="ac.s1.t">Goal</h3><p data-i18n="ac.s1.d">Detect and track a person's face, then drive after them so the camera keeps them in frame.</p></div>
+          <div class="step"><h3 data-i18n="ac.s2.t">Built in 5 days</h3><p data-i18n="ac.s2.d">Complete chassis and mecanum drive, rotating turret with servo arm, ESP32 electronics and firmware.</p></div>
+          <div class="step"><h3 data-i18n="ac.s3.t">Next step</h3><p data-i18n="ac.s3.d">Full face tracking and following were not finished within the timeframe — the platform is ready for that layer.</p></div>
+        </div>
       </div>
     </section>
 
@@ -65,6 +79,6 @@
       <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
     </div>
   </footer>
-  <script src="script.js?v=20261117122602"></script>
+  <script src="script.js?v=20261117122805"></script>
 </body>
 </html>
