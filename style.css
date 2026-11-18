@@ -468,3 +468,6 @@ html[lang="pl"] .en-only { display: none; }
   .q-opts { grid-template-columns: repeat(2, 1fr); }
 }
 .stage-tab:hover { text-decoration: none; color: var(--ink); } a.stage-tab { display: inline-flex; align-items: center; }
+#q-img { cursor: zoom-in; }
+.q-zoomhint { display: none; }
+@media (max-width: 600px) { .q-zoomhint { display: block; font-size: .8rem; color: var(--muted); text-align: center; margin-top: .4rem; } }

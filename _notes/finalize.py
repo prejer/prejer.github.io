@@ -55,6 +55,6 @@ for f in sorted(glob.glob("data/*.json"),reverse=True):
         im=im.convert("P",palette=Image.ADAPTIVE,colors=64)
         im.save(f"{OUT}/{name}",optimize=True)
         k=ans if ans else keys.get(ed,{}).get(str(i))
-        tasks.append({"id":f"{ed}-{i}","ed":ed.replace("-","/"),"n":i,"img":f"assets/ee1/{name}","ans":k.split(","),"topic":topic,"expl":expl,"opts":opts})
+        tasks.append({"id":f"{ed}-{i}","ed":ed.replace("-","/"),"n":i,"img":f"assets/ee1/{name}","ans":k.split(","),"topic":topic,"expl":expl,"opts":opts,"unoff":bool(d.get("unofficial"))})
 json.dump({"topics":TOP,"tasks":tasks},open(f"{SITE}/assets/ee1/tasks.json","w"),ensure_ascii=False)
 print(len(tasks),"tasks")

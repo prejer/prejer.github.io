@@ -421,7 +421,7 @@ document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date
     else pool.sort((a, b) => b.ed.localeCompare(a.ed) || a.n - b.n);
     idx = 0; show();
   }
-  function show() {
+  function show(scroll) {
     answered = false; chosen.clear();
     $("q-res").hidden = true; $("q-check").disabled = true;
     if (!pool.length) { $("q-src").textContent = "Brak zadań dla tego filtra"; $("q-img").hidden = true; $("q-opts").innerHTML = ""; return; }
@@ -446,7 +446,7 @@ document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date
       };
       box.appendChild(b);
     });
-    window.scrollTo({ top: card.getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth" });
+    if (scroll) window.scrollTo({ top: card.getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth" });
   }
   function check() {
     if (answered || !chosen.size) return;
@@ -464,11 +464,12 @@ document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date
     r.className = "q-result " + (good ? "ok" : "bad");
     r.innerHTML = "<strong></strong><span></span>";
     r.querySelector("strong").textContent = good ? "Dobrze!" : "Poprawna odpowiedź: " + q.ans.join(" i ");
-    r.querySelector("span").textContent = q.expl;
+    r.querySelector("span").textContent = q.expl + (q.unoff ? " (Ta edycja nie miała klucza w materiałach — odpowiedź nieoficjalna.)" : "");
     $("q-check").disabled = true;
   }
   $("q-check").onclick = check;
-  $("q-next").onclick = () => { idx++; show(); };
+  $("q-next").onclick = () => { idx++; show(true); };
+  $("q-img").onclick = () => window.open($("q-img").src, "_blank");
   ["q-topic", "q-ed", "q-order"].forEach(id => $(id).onchange = build);
   fetch("assets/ee1/tasks.json").then(r => r.json()).then(d => {
     data = d;

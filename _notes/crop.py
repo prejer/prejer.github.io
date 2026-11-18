@@ -47,14 +47,18 @@ for ed,path in (ED.items() if __name__=="__main__" else []):
     for k,(pi,y,n) in enumerate(starts):
         end = starts[k+1][:2] if k+1<len(starts) else (stopat if stopat else (len(doc)-1, contentbottom.get(len(doc)-1,doc[-1].rect.height)+4))
         if stopat and (end[0]>stopat[0] or (end[0]==stopat[0] and end[1]>stopat[1])): end=stopat
-        segs=[]; p=pi; ys=y-4
+        segs=[]; p=pi; ys=y-1
         while True:
             page=doc[p]; H=page.rect.height
-            if p==end[0]: ye=end[1]-3
-            else: ye=max(contentbottom.get(p,H-70), max([i['bbox'][3] for i in page.get_image_info() if i['bbox'][3]<H-40]+[0]))+4
+            if p==end[0]:
+                ey=end[1]; bots=[bb[3] for bb,t,_ in lines(page) if bb[1]<ey-2 and bb[3]<ey+9]
+                ye=min(max(bots)+1, ey+8) if bots else ey-3
+            else:
+                ft=[bb[1] for bb,t,_ in lines(page) if (bb[1]>H-110 and re.search(r'Strona|zawody I stopnia \(',t)) or (bb[1]>H-45 and FOOT.search(t))]+[dr['rect'].y0 for dr in page.get_drawings() if dr['rect'].y0>H-110 and dr['rect'].width>250]
+                ye=(min(ft)-3) if ft else H-30
             if ye>ys+8: segs.append((p,ys,ye))
             if p>=end[0]: break
-            p+=1; ys=min(contenttop.get(p,40), min([i['bbox'][1] for i in doc[p].get_image_info()]+[999]), min([dr['rect'].y0 for dr in doc[p].get_drawings() if dr['rect'].y0>20]+[999]))-4
+            p+=1; ys=min(contenttop.get(p,40), min([i['bbox'][1] for i in doc[p].get_image_info()]+[999]), min([dr['rect'].y0 for dr in doc[p].get_drawings() if dr["rect"].y0>20]+[999]))-14
         ims=[]
         for p,a,b in segs:
             page=doc[p]; clip=pymupdf.Rect(20,a,page.rect.width-20,b)
