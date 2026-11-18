@@ -1,0 +1,40 @@
+<!-- Szkic materiału na II etap (nie publikowany). Przenieść do euroelektra.src.html, gdy będzie gotowy. -->
+<h2 id="nieustalone"><span class="num">06</span> Stany nieustalone</h2>
+<p>Po przełączeniu obwodu z C lub L wielkości nie zmieniają się skokowo, tylko dążą wykładniczo do nowej wartości. Jeden wzór załatwia prawie wszystkie zadania:</p>
+\[ x(t) = x_\infty + \bigl(x_0 - x_\infty\bigr)\,e^{-t/\tau}, \qquad \tau_{RC} = R\,C, \qquad \tau_{RL} = \frac{L}{R} \]
+<p>Przepis: (1) \(x_0\) — wartość tuż po przełączeniu (z ciągłości \(u_C\) lub \(i_L\)); (2) \(x_\infty\) — stan ustalony (C = przerwa, L = zwarcie); (3) \(\tau\) — \(R\) to opór <em>widziany przez</em> C lub L (Thevenin!).</p>
+<p>Ładowanie kondensatora ze źródła \(U\):</p>
+\[ u_C(t) = U\bigl(1 - e^{-t/\tau}\bigr), \qquad i(t) = \frac{U}{R}\,e^{-t/\tau} \]
+<p>Po \(\tau\) stan przejściowy jest „zrobiony” w 63%, po \(3\tau\) w 95%, po \(5\tau\) w ~99% — przyjmuje się, że się skończył.</p>
+<div class="callout"><b>Ciekawostka z bilansu energii:</b> przy ładowaniu kondensatora ze źródła napięciowego przez opornik, w oporniku ginie \(\tfrac12CU^2\) — dokładnie tyle, ile trafia do kondensatora, <em>niezależnie od wartości R</em>. Źródło oddaje \(QU = CU^2\), sprawność ładowania to zawsze 50%.</div>
+
+
+
+<h2 id="odksztalcone"><span class="num">16</span> Przebiegi odkształcone i jakość energii</h2>
+<p>Każdy okresowy przebieg da się rozłożyć na sumę sinusoid (szereg Fouriera): składową stałą, podstawową harmoniczną i harmoniczne wyższe. Odbiorniki nieliniowe (zasilacze impulsowe, falowniki, LED) pobierają prąd odkształcony.</p>
+\[ U = \sqrt{U_0^2 + U_1^2 + U_2^2 + \dots} \qquad THD = \frac{\sqrt{U_2^2 + U_3^2 + \dots}}{U_1}\cdot100\% \]
+<ul>
+  <li>Moc czynną dają tylko pary napięcie–prąd <em>tej samej</em> harmonicznej.</li>
+  <li>Reaktancja zależy od częstotliwości: dla \(n\)-tej harmonicznej \(X_L^{(n)} = n X_L\), \(X_C^{(n)} = X_C / n\).</li>
+  <li>Harmoniczne „potrójne” (3., 9., …) w układzie trójfazowym są w fazie we wszystkich fazach, więc w przewodzie N się <b>sumują</b> — prąd w N może przekroczyć prąd fazowy.</li>
+</ul>
+
+
+
+<h3>(z rozdziału AC) Liczby zespolone</h3>
+<h3>Liczby zespolone (fazory)</h3>
+<p>Zamiast dodawać sinusoidy, reprezentujemy je jako wektory na płaszczyźnie zespolonej. Mnożenie przez \(j\) to obrót o +90°. Wtedy prawo Ohma i Kirchhoffa działają jak w DC:</p>
+\[ \underline{Z}_R = R,\quad \underline{Z}_L = jX_L,\quad \underline{Z}_C = -jX_C \qquad \underline{Z} = R + j(X_L - X_C) \]
+\[ |Z| = \sqrt{R^2 + (X_L - X_C)^2}, \qquad \varphi = \operatorname{arctg}\frac{X_L - X_C}{R} \]
+<p>\(\varphi > 0\) — obwód ma charakter indukcyjny (prąd się spóźnia), \(\varphi < 0\) — pojemnościowy.</p>
+<div class="trap"><b>Pułapka:</b> w szeregowym RLC napięcia na elementach dodają się <em>wektorowo</em>, nie arytmetycznie. Napięcie na L lub C może być wielokrotnie większe niż napięcie zasilania (szczególnie przy rezonansie).</div>
+
+
+
+<ul>
+  <li><b>Regulacja częstotliwościowa (falownik):</b> zmiana \(f\) zmienia \(n_s\). Jednocześnie zmienia się \(U\) tak, by \(U/f = \text{const}\) — wtedy strumień (\(\Phi \sim U/f\)) zostaje stały, a rdzeń się nie nasyca.</li>
+</ul>
+
+<ul>
+  <li><b>Szybkie wyłączenie zasilania (SWZ):</b> impedancja pętli zwarcia musi być na tyle mała, by przy zwarciu do obudowy popłynął prąd, który wyzwoli zabezpieczenie w wymaganym czasie: \(Z_s \cdot I_a \le U_0\).</li>
+</ul>

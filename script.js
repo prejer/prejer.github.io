@@ -233,8 +233,8 @@ const pl = {
   "notes.title": "Notatki",
   "notes.lead": "To, czego nauczyłem się, przygotowując się do olimpiad, zebrane w jednym miejscu — wyjaśnione od podstaw, a nie żargonem, żeby innym łatwiej było zobaczyć, co trzeba umieć i dlaczego to działa.",
   "notes.ee.meta": "Elektrotechnika · po polsku",
-  "notes.ee.d": "Obwody DC i AC, stany nieustalone, układ trójfazowy, transformatory, maszyny, elektronika, miernictwo i ochrona — od ładunku i energii w górę, ze ściągą wzorów.",
-  "notes.sec": "17 rozdziałów",
+  "notes.ee.d": "Materiał na I etap: obwody DC i AC, układ trójfazowy, transformatory, maszyny, elektronika, miernictwo i ochrona — od ładunku i energii w górę, ze ściągą wzorów. Etap II wkrótce.",
+  "notes.sec": "Etap I · 16 rozdziałów",
   "notes.cheat": "Ściąga wzorów",
   "notes.soon": "Wkrótce",
   "notes.phys": "Fizyka",
@@ -373,18 +373,33 @@ function openBox(start) {
 
 document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
-// highlight current section in notes table of contents
+// notes: stage tabs + one chapter at a time
 (function () {
+  const art = document.querySelector(".notes");
+  if (!art) return;
+  // stage tabs
+  document.querySelectorAll(".stage-tab").forEach(btn => btn.addEventListener("click", () => {
+    document.querySelectorAll(".stage-tab").forEach(b => b.classList.toggle("on", b === btn));
+    document.querySelectorAll(".stage").forEach(s => { s.hidden = s.id !== btn.dataset.stage; });
+  }));
+  // chapter tabs
+  const chapters = [...art.querySelectorAll(".chapter")];
   const links = [...document.querySelectorAll(".toc a")];
-  if (!links.length || !("IntersectionObserver" in window)) return;
-  const map = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        links.forEach(a => a.classList.remove("on"));
-        const a = map.get(e.target.id); if (a) a.classList.add("on");
-      }
-    });
-  }, { rootMargin: "-80px 0px -70% 0px" });
-  document.querySelectorAll(".notes h2[id]").forEach(h => obs.observe(h));
+  const prev = art.querySelector(".chap-nav .prev"), next = art.querySelector(".chap-nav .next");
+  art.classList.add("tabbed");
+  function show(id, scroll) {
+    let i = chapters.findIndex(c => c.id === id);
+    if (i < 0) i = 0;
+    chapters.forEach((c, k) => c.classList.toggle("on", k === i));
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + chapters[i].id));
+    const p = chapters[i - 1], n = chapters[i + 1];
+    prev.hidden = !p; next.hidden = !n;
+    if (p) { prev.href = "#" + p.id; prev.querySelector("span").textContent = p.dataset.title; }
+    if (n) { next.href = "#" + n.id; next.querySelector("span").textContent = n.dataset.title; }
+    const active = links.find(a => a.classList.contains("on"));
+    if (active && active.scrollIntoView && window.innerWidth <= 900) active.scrollIntoView({ block: "nearest", inline: "center" });
+    if (scroll) window.scrollTo({ top: document.querySelector(".stage-tabs").getBoundingClientRect().top + window.scrollY - 80 });
+  }
+  window.addEventListener("hashchange", () => show(location.hash.slice(1), true));
+  show(location.hash.slice(1), false);
 })();

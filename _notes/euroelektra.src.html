@@ -3,40 +3,44 @@
         <div class="crumbs"><a href="notes.html" data-i18n="nav.notes">Notes</a> / <span>EUROELEKTRA</span></div>
         <h1>EUROELEKTRA — elektrotechnika od podstaw</h1>
         <p class="lead">Wszystko, czego używałem do nauki, zebrane w jednym miejscu. Każdy temat zaczynam od tego, <em>skąd</em> bierze się wzór, a nie od samego wzoru. Jak rozumiesz mechanizm, większość wzorów potrafisz odtworzyć sam w trakcie zawodów.</p>
-        <p class="note-meta"><span class="chip">Grupa elektryczna</span><span class="chip">Etapy I–II</span><span class="chip">Aktualizacja: listopad 2026</span></p>
+        <p class="note-meta"><span class="chip">Grupa elektryczna</span><span class="chip">Etap I</span><span class="chip">Aktualizacja: listopad 2026</span></p>
         <p class="en-only muted" style="font-size:.92rem">These notes are written in Polish — they are meant for students preparing for the Polish EUROELEKTRA olympiad.</p>
       </div>
     </section>
 
     <section class="section notes-wrap">
-      <div class="wrap notes-grid">
-        <aside class="toc">
-          <p class="eyebrow">Spis treści</p>
-          <ol>
-            <li><a href="#mapa">Jak z tego korzystać</a></li>
-            <li><a href="#fundament">Ładunek, prąd, napięcie, energia</a></li>
-            <li><a href="#opor">Opór i prawo Ohma</a></li>
-            <li><a href="#kirchhoff">Obwody prądu stałego</a></li>
-            <li><a href="#kondensator">Pole elektryczne i kondensator</a></li>
-            <li><a href="#magnetyzm">Magnetyzm i cewka</a></li>
-            <li><a href="#nieustalone">Stany nieustalone</a></li>
-            <li><a href="#ac">Prąd przemienny</a></li>
-            <li><a href="#moc">Moc w obwodach AC</a></li>
-            <li><a href="#trojfaz">Układ trójfazowy</a></li>
-            <li><a href="#transformator">Transformator</a></li>
-            <li><a href="#maszyny">Maszyny elektryczne</a></li>
-            <li><a href="#elektronika">Elektronika</a></li>
-            <li><a href="#pomiary">Miernictwo</a></li>
-            <li><a href="#ochrona">Ochrona i instalacje</a></li>
-            <li><a href="#cyfrowa">Technika cyfrowa</a></li>
-            <li><a href="#odksztalcone">Przebiegi odkształcone</a></li>
-            <li><a href="#sciaga">Ściąga wzorów</a></li>
-          </ol>
-        </aside>
+      <div class="wrap">
+        <div class="stage-tabs" role="tablist">
+          <button class="stage-tab on" data-stage="s1" role="tab">Etap I <small>szkolny</small></button>
+          <button class="stage-tab" data-stage="s2" role="tab">Etap II <small>okręgowy · wkrótce</small></button>
+        </div>
 
-        <article class="notes">
-
-<h2 id="mapa"><span class="num">00</span> Jak z tego korzystać</h2>
+        <div class="stage" id="s1">
+          <div class="notes-grid">
+            <aside class="toc">
+              <p class="eyebrow">Rozdziały</p>
+              <ol role="tablist">
+            <li><a href="#mapa" role="tab">Jak z tego korzystać</a></li>
+            <li><a href="#fundament" role="tab">Ładunek, prąd, napięcie, energia</a></li>
+            <li><a href="#opor" role="tab">Opór i prawo Ohma</a></li>
+            <li><a href="#kirchhoff" role="tab">Obwody prądu stałego</a></li>
+            <li><a href="#kondensator" role="tab">Pole elektryczne i kondensator</a></li>
+            <li><a href="#magnetyzm" role="tab">Magnetyzm i cewka</a></li>
+            <li><a href="#ac" role="tab">Prąd przemienny</a></li>
+            <li><a href="#moc" role="tab">Moc w obwodach AC</a></li>
+            <li><a href="#trojfaz" role="tab">Układ trójfazowy</a></li>
+            <li><a href="#transformator" role="tab">Transformator</a></li>
+            <li><a href="#maszyny" role="tab">Maszyny elektryczne</a></li>
+            <li><a href="#elektronika" role="tab">Elektronika</a></li>
+            <li><a href="#pomiary" role="tab">Miernictwo</a></li>
+            <li><a href="#ochrona" role="tab">Ochrona i instalacje</a></li>
+            <li><a href="#cyfrowa" role="tab">Technika cyfrowa</a></li>
+            <li><a href="#sciaga" role="tab">Ściąga wzorów</a></li>
+              </ol>
+            </aside>
+            <article class="notes">
+<section class="chapter" id="mapa" data-title="Jak z tego korzystać">
+<h2><span class="num">00</span> Jak z tego korzystać</h2>
 <p>Całą elektrotechnikę da się zbudować z kilku zasad, które znasz z fizyki:</p>
 <ol>
   <li><b>Ładunek się nie tworzy i nie znika</b> → prawo prądowe Kirchhoffa, wszystko o prądach w węzłach.</li>
@@ -44,9 +48,11 @@
   <li><b>Ładunek w ruchu wytwarza pole magnetyczne</b> → cewki, silniki, siły elektrodynamiczne.</li>
   <li><b>Zmienne pole magnetyczne wytwarza napięcie</b> (Faraday) → transformator, prądnica, indukcyjność.</li>
 </ol>
+<div class="callout"><b>Zakres:</b> ta część obejmuje materiał <b>I etapu</b> — podstawę programową zawodu technik elektryk. Tematy z wymagań dodatkowych (liczby zespolone, stany nieustalone, przebiegi odkształcone, napędy przekształtnikowe, obliczenia ochrony) będą w zakładce <b>Etap II</b>.</div>
 <p>Przy każdym zadaniu zadawaj sobie dwa pytania: <em>gdzie płynie ładunek</em> i <em>gdzie idzie energia</em>. Bloki „Pułapka” to błędy, które sam robiłem albo które zadania lubią sprawdzać.</p>
-
-<h2 id="fundament"><span class="num">01</span> Ładunek, prąd, napięcie, energia</h2>
+</section>
+<section class="chapter" id="fundament" data-title="Ładunek, prąd, napięcie, energia">
+<h2><span class="num">01</span> Ładunek, prąd, napięcie, energia</h2>
 <p><b>Prąd</b> to po prostu tempo przepływu ładunku przez przekrój przewodu:</p>
 \[ i = \frac{dq}{dt}, \qquad I = \frac{Q}{t}\ \text{(dla stałego prądu)} \]
 <p><b>Napięcie</b> to energia przypadająca na jednostkę ładunku. Jeśli ładunek \(Q\) przechodzi między punktami o napięciu \(U\), to oddaje (albo pobiera) energię:</p>
@@ -55,8 +61,9 @@
 \[ P = \frac{dW}{dt} = U\frac{dq}{dt} = U\,I \]
 <div class="callout"><b>Intuicja:</b> napięcie mówi, ile energii niesie każdy „kawałek” ładunku, a prąd — ile takich kawałków przechodzi na sekundę. Iloczyn to energia na sekundę.</div>
 <div class="trap"><b>Pułapka:</b> kWh to jednostka <em>energii</em>, nie mocy: \(1\,\text{kWh} = 1000\,\text{W}\cdot 3600\,\text{s} = 3{,}6\,\text{MJ}\).</div>
-
-<h2 id="opor"><span class="num">02</span> Opór i prawo Ohma</h2>
+</section>
+<section class="chapter" id="opor" data-title="Opór i prawo Ohma">
+<h2><span class="num">02</span> Opór i prawo Ohma</h2>
 <p>W przewodniku ładunki są przyspieszane przez pole, ale ciągle zderzają się z siecią krystaliczną. Wynik: prędkość dryfu (a więc prąd) jest proporcjonalna do pola, czyli do napięcia. To jest właśnie prawo Ohma:</p>
 \[ U = R\,I \]
 <p>Opór zależy od geometrii w sposób, który łatwo „zobaczyć”: dłuższy przewód = więcej zderzeń po drodze, grubszy = więcej równoległych „ścieżek”:</p>
@@ -67,8 +74,9 @@
 \[ P = U I = I^2 R = \frac{U^2}{R} \]
 <div class="trap"><b>Pułapka:</b> który wzór wybrać? Patrz, co jest <em>stałe</em>. Przy stałym napięciu (gniazdko) mniejsze \(R\) = większa moc (\(U^2/R\)). Przy stałym prądzie (elementy szeregowo) większe \(R\) = większa moc (\(I^2R\)). Dlatego w szeregu z dwóch żarówek mocniej świeci ta o <em>mniejszej</em> mocy znamionowej.</div>
 <div class="trap"><b>Pułapka:</b> „przewód 2× dłuższy i 2× grubszy (średnica)” → przekrój rośnie 4×, więc \(R\) maleje 2×.</div>
-
-<h2 id="kirchhoff"><span class="num">03</span> Obwody prądu stałego</h2>
+</section>
+<section class="chapter" id="kirchhoff" data-title="Obwody prądu stałego">
+<h2><span class="num">03</span> Obwody prądu stałego</h2>
 <h3>Prawa Kirchhoffa — to tylko zasady zachowania</h3>
 <p><b>I prawo (prądowe):</b> ładunek nie gromadzi się w węźle, więc ile wpływa, tyle wypływa: \(\sum I_{\text{wpł}} = \sum I_{\text{wypł}}\).</p>
 <p><b>II prawo (napięciowe):</b> jeśli obejdziesz dowolne oczko i wrócisz do punktu startu, ładunek ma tę samą energię co na początku. Suma napięć w oczku wynosi zero: \(\sum E = \sum R I\).</p>
@@ -100,8 +108,9 @@
 <p>Mostek jest w równowadze (przez gałąź środkową nie płynie prąd), gdy \(R_1 R_4 = R_2 R_3\), czyli gdy oba dzielniki dzielą napięcie w tej samej proporcji. Gałąź środkową możesz wtedy usunąć — to częsty trik w zadaniach „policz rezystancję zastępczą”.</p>
 <p><b>Gwiazda ↔ trójkąt</b> (gdy nic nie jest ani szeregowo, ani równolegle):</p>
 \[ R_{\text{Y}} = \frac{R_a R_b}{R_a + R_b + R_c} \qquad R_{\Delta} = 3R_{\text{Y}}\ \text{(dla symetrycznych)} \]
-
-<h2 id="kondensator"><span class="num">04</span> Pole elektryczne i kondensator</h2>
+</section>
+<section class="chapter" id="kondensator" data-title="Pole elektryczne i kondensator">
+<h2><span class="num">04</span> Pole elektryczne i kondensator</h2>
 <p>Kondensator to dwie okładki, na których gromadzi się ładunek \(+Q\) i \(-Q\). Im więcej ładunku, tym silniejsze pole i większe napięcie — proporcjonalnie. Współczynnik to pojemność:</p>
 \[ Q = C\,U, \qquad C = \varepsilon_0 \varepsilon_r \frac{S}{d}, \qquad \varepsilon_0 \approx 8{,}85\cdot10^{-12}\ \tfrac{\text{F}}{\text{m}} \]
 <p>Większa powierzchnia = więcej miejsca na ładunek, mniejsza odległość = ten sam ładunek daje mniejsze napięcie (bo \(U = E\,d\)). Dielektryk osłabia pole, więc mieści się więcej ładunku.</p>
@@ -110,8 +119,9 @@
 <p><b>Prąd kondensatora:</b> z \(q = Cu\) różniczkując: \(i = C\,\dfrac{du}{dt}\). Wniosek: napięcie na kondensatorze nie może zmienić się skokowo (wymagałoby to nieskończonego prądu).</p>
 <p><b>Łączenie</b> działa „na odwrót” niż rezystory: równolegle dodajesz powierzchnie, więc \(C = C_1 + C_2\); szeregowo napięcia się dodają przy tym samym ładunku, więc \(\frac1C = \frac1{C_1} + \frac1{C_2}\).</p>
 <div class="trap"><b>Pułapka:</b> szeregowo połączone kondensatory mają ten sam <em>ładunek</em>, nie to samo napięcie. Napięcie rozkłada się odwrotnie do pojemności: mniejszy kondensator dostaje większe napięcie (ważne przy dobieraniu napięcia znamionowego).</div>
-
-<h2 id="magnetyzm"><span class="num">05</span> Magnetyzm i cewka</h2>
+</section>
+<section class="chapter" id="magnetyzm" data-title="Magnetyzm i cewka">
+<h2><span class="num">05</span> Magnetyzm i cewka</h2>
 <p><b>Prąd wytwarza pole magnetyczne.</b> Cewka skupia je w środku. Strumień magnetyczny \(\Phi = B\,S\) to „ile pola” przechodzi przez powierzchnię zwoju.</p>
 <p><b>Siła na przewodnik z prądem</b> (podstawa każdego silnika):</p>
 \[ F = B\,I\,l\,\sin\alpha \]
@@ -122,17 +132,9 @@
 <div class="callout"><b>Intuicja:</b> cewka to „bezwładność” prądu, tak jak masa to bezwładność ruchu. Prądu w cewce nie da się zmienić skokowo. Dlatego przy rozłączaniu obwodu z cewką powstaje iskra / przepięcie — cewka „próbuje” utrzymać prąd. Dioda gasząca (zwrotna) równolegle do cewki przekaźnika daje temu prądowi bezpieczną drogę.</div>
 <div class="trap"><b>Pułapka:</b> \(L \sim N^2\), nie \(N\). Podwojenie liczby zwojów = 4× większa indukcyjność.</div>
 <p><b>Dualność C ↔ L</b> (bardzo pomaga zapamiętać): \(i = C\,du/dt\) ↔ \(u = L\,di/dt\); \(\tfrac12CU^2\) ↔ \(\tfrac12LI^2\); kondensator „trzyma” napięcie, cewka „trzyma” prąd; w stanie ustalonym DC kondensator = przerwa, cewka = zwarcie.</p>
-
-<h2 id="nieustalone"><span class="num">06</span> Stany nieustalone</h2>
-<p>Po przełączeniu obwodu z C lub L wielkości nie zmieniają się skokowo, tylko dążą wykładniczo do nowej wartości. Jeden wzór załatwia prawie wszystkie zadania:</p>
-\[ x(t) = x_\infty + \bigl(x_0 - x_\infty\bigr)\,e^{-t/\tau}, \qquad \tau_{RC} = R\,C, \qquad \tau_{RL} = \frac{L}{R} \]
-<p>Przepis: (1) \(x_0\) — wartość tuż po przełączeniu (z ciągłości \(u_C\) lub \(i_L\)); (2) \(x_\infty\) — stan ustalony (C = przerwa, L = zwarcie); (3) \(\tau\) — \(R\) to opór <em>widziany przez</em> C lub L (Thevenin!).</p>
-<p>Ładowanie kondensatora ze źródła \(U\):</p>
-\[ u_C(t) = U\bigl(1 - e^{-t/\tau}\bigr), \qquad i(t) = \frac{U}{R}\,e^{-t/\tau} \]
-<p>Po \(\tau\) stan przejściowy jest „zrobiony” w 63%, po \(3\tau\) w 95%, po \(5\tau\) w ~99% — przyjmuje się, że się skończył.</p>
-<div class="callout"><b>Ciekawostka z bilansu energii:</b> przy ładowaniu kondensatora ze źródła napięciowego przez opornik, w oporniku ginie \(\tfrac12CU^2\) — dokładnie tyle, ile trafia do kondensatora, <em>niezależnie od wartości R</em>. Źródło oddaje \(QU = CU^2\), sprawność ładowania to zawsze 50%.</div>
-
-<h2 id="ac"><span class="num">07</span> Prąd przemienny</h2>
+</section>
+<section class="chapter" id="ac" data-title="Prąd przemienny">
+<h2><span class="num">06</span> Prąd przemienny</h2>
 <p>Napięcie sinusoidalne: \(u(t) = U_m \sin(\omega t + \varphi)\), gdzie \(\omega = 2\pi f\). W Polsce \(f = 50\,\text{Hz}\), \(\omega \approx 314\,\text{rad/s}\).</p>
 <h3>Wartość skuteczna — definicja z energii</h3>
 <p>Wartość skuteczna to takie napięcie stałe, które w tym samym oporniku wydziela tę samą moc. Średnia z \(\sin^2\) to \(\tfrac12\), stąd:</p>
@@ -149,12 +151,11 @@
 </ul>
 <p>Mnemotechnika: <b>CIVIL</b> — w C prąd (I) przed napięciem (V); w L napięcie (V) przed prądem (I).</p>
 
-<h3>Liczby zespolone (fazory)</h3>
-<p>Zamiast dodawać sinusoidy, reprezentujemy je jako wektory na płaszczyźnie zespolonej. Mnożenie przez \(j\) to obrót o +90°. Wtedy prawo Ohma i Kirchhoffa działają jak w DC:</p>
-\[ \underline{Z}_R = R,\quad \underline{Z}_L = jX_L,\quad \underline{Z}_C = -jX_C \qquad \underline{Z} = R + j(X_L - X_C) \]
-\[ |Z| = \sqrt{R^2 + (X_L - X_C)^2}, \qquad \varphi = \operatorname{arctg}\frac{X_L - X_C}{R} \]
-<p>\(\varphi > 0\) — obwód ma charakter indukcyjny (prąd się spóźnia), \(\varphi < 0\) — pojemnościowy.</p>
-<div class="trap"><b>Pułapka:</b> w szeregowym RLC napięcia na elementach dodają się <em>wektorowo</em>, nie arytmetycznie. Napięcie na L lub C może być wielokrotnie większe niż napięcie zasilania (szczególnie przy rezonansie).</div>
+<h3>Impedancja — trójkąt oporów</h3>
+<p>W obwodzie szeregowym RLC napięcie na R jest w fazie z prądem, a napięcia na L i C są przesunięte o ±90°. Dlatego opory nie dodają się zwyczajnie, tylko jak boki trójkąta prostokątnego:</p>
+\[ Z = \sqrt{R^2 + (X_L - X_C)^2}, \qquad \cos\varphi = \frac{R}{Z}, \qquad I = \frac{U}{Z} \]
+<p>Gdy \(X_L > X_C\), obwód ma charakter indukcyjny (prąd się spóźnia za napięciem), gdy \(X_C > X_L\) — pojemnościowy.</p>
+<div class="trap"><b>Pułapka:</b> w szeregowym RLC napięcia na elementach dodają się <em>geometrycznie</em>: \(U = \sqrt{U_R^2 + (U_L - U_C)^2}\). Napięcie na L lub C może być wielokrotnie większe niż napięcie zasilania (szczególnie przy rezonansie).</div>
 
 <h3>Rezonans</h3>
 <p>Gdy \(X_L = X_C\), reaktancje się znoszą:</p>
@@ -163,8 +164,9 @@
   <li><b>Szeregowy:</b> \(Z = R\) minimalne, prąd maksymalny, napięcia na L i C są równe, przeciwne i mogą być ogromne. Dobroć \(Q = \frac{X_L}{R} = \frac{U_L}{U}\).</li>
   <li><b>Równoległy:</b> impedancja maksymalna, prąd ze źródła minimalny, między L i C krąży duży prąd wewnętrzny.</li>
 </ul>
-
-<h2 id="moc"><span class="num">08</span> Moc w obwodach AC</h2>
+</section>
+<section class="chapter" id="moc" data-title="Moc w obwodach AC">
+<h2><span class="num">07</span> Moc w obwodach AC</h2>
 <p>Energia oddana przez źródło częściowo wykonuje pracę (ciepło, ruch), a częściowo tylko „wędruje” w tę i z powrotem między źródłem a polem cewki lub kondensatora. Stąd trzy moce:</p>
 \[ P = UI\cos\varphi\ [\text{W}] \qquad Q = UI\sin\varphi\ [\text{var}] \qquad S = UI\ [\text{VA}] \qquad S^2 = P^2 + Q^2 \]
 <ul>
@@ -175,8 +177,9 @@
 <p><b>Kompensacja mocy biernej.</b> Silniki pobierają moc bierną indukcyjną. Dołączenie kondensatorów równolegle dostarcza mocy biernej „lokalnie”, więc z sieci płynie mniejszy prąd przy tej samej mocy czynnej:</p>
 \[ Q_C = P\,(\operatorname{tg}\varphi_1 - \operatorname{tg}\varphi_2), \qquad C = \frac{Q_C}{\omega U^2} \]
 <div class="trap"><b>Pułapka:</b> kompensacja nie zmienia mocy czynnej odbiornika ani prądu w samym odbiorniku. Zmniejsza prąd w <em>linii</em> przed punktem kompensacji, a więc straty \(I^2R\) w sieci.</div>
-
-<h2 id="trojfaz"><span class="num">09</span> Układ trójfazowy</h2>
+</section>
+<section class="chapter" id="trojfaz" data-title="Układ trójfazowy">
+<h2><span class="num">08</span> Układ trójfazowy</h2>
 <p>Trzy napięcia o tej samej amplitudzie, przesunięte o 120°. Ich suma w każdej chwili wynosi zero — dlatego przy symetrycznym obciążeniu przewód neutralny nie przewodzi prądu, a moc chwilowa jest stała (silniki pracują równo, bez pulsowania).</p>
 <p><b>Napięcia:</b> fazowe \(U_f\) (faza–N) i międzyfazowe \(U\) (faza–faza). Różnica dwóch wektorów o tej samej długości przesuniętych o 120° ma długość \(\sqrt3\) razy większą:</p>
 \[ U = \sqrt3\,U_f \qquad 400\,\text{V} = \sqrt3 \cdot 230\,\text{V} \]
@@ -188,8 +191,9 @@
 \[ P = \sqrt3\,U\,I\cos\varphi = 3\,U_f I_f\cos\varphi \]
 <div class="callout"><b>Ważny wynik:</b> ten sam odbiornik (te same impedancje) połączony w trójkąt pobiera <b>3 razy</b> większą moc niż w gwiazdę (napięcie na każdej impedancji rośnie \(\sqrt3\) razy, moc \(\sim U^2\)). Na tym opiera się rozruch silnika przełącznikiem gwiazda–trójkąt: najpierw Y (3× mniejszy prąd rozruchowy), potem Δ.</div>
 <div class="trap"><b>Pułapka:</b> przerwa przewodu N przy niesymetrycznym obciążeniu w gwieździe → napięcia na odbiornikach się „rozjeżdżają”; mniej obciążona faza może dostać prawie 400 V. Dlatego w N nie montuje się bezpieczników.</div>
-
-<h2 id="transformator"><span class="num">10</span> Transformator</h2>
+</section>
+<section class="chapter" id="transformator" data-title="Transformator">
+<h2><span class="num">09</span> Transformator</h2>
 <p>Dwa uzwojenia na wspólnym rdzeniu. Zmienny prąd w pierwotnym → zmienny strumień w rdzeniu → przez <em>każdy</em> zwój obu uzwojeń przechodzi ten sam strumień, więc indukuje się to samo napięcie na zwój (Faraday). Stąd przekładnia:</p>
 \[ \vartheta = \frac{U_1}{U_2} \approx \frac{N_1}{N_2} \approx \frac{I_2}{I_1} \]
 <p>Prądy są w odwrotnej proporcji, bo moc wejściowa ≈ moc wyjściowa (bilans energii). Impedancja „przeliczona” na stronę pierwotną: \(Z' = \vartheta^2 Z\).</p>
@@ -200,8 +204,9 @@
   <li><b>Napięcie zwarcia \(u_k\%\)</b> — przy jakim procencie napięcia znamionowego po zwarciu wtórnego płynie prąd znamionowy. Prąd zwarciowy w sieci: \(I_k \approx I_n \cdot \frac{100}{u_k\%}\).</li>
   <li>Sprawność jest maksymalna, gdy straty w miedzi = straty w żelazie.</li>
 </ul>
-
-<h2 id="maszyny"><span class="num">11</span> Maszyny elektryczne</h2>
+</section>
+<section class="chapter" id="maszyny" data-title="Maszyny elektryczne">
+<h2><span class="num">10</span> Maszyny elektryczne</h2>
 <p>Każda maszyna to dwa zjawiska naraz: siła na przewodnik z prądem w polu (\(F = BIl\)) i napięcie indukowane w poruszającym się przewodniku (\(e = Blv\)). Silnik i prądnica to ta sama maszyna — zależy tylko od kierunku przepływu energii.</p>
 <h3>Silnik prądu stałego</h3>
 \[ E = k\,\Phi\,\omega \qquad M = k\,\Phi\,I \qquad U = E + I R_a \quad\Rightarrow\quad \omega = \frac{U - I R_a}{k\Phi} \]
@@ -216,13 +221,13 @@
 <p>(\(p\) — liczba par biegunów; dla 50 Hz: 3000, 1500, 1000, 750 obr/min). <b>Dlaczego asynchroniczny?</b> Gdyby wirnik osiągnął prędkość pola, pręty przestałyby przecinać linie pola → zero prądu → zero momentu. Musi być poślizg (typowo 2–6%).</p>
 <ul>
   <li>Prąd rozruchowy 5–8× znamionowy (wirnik stoi = transformator ze zwartym wtórnym).</li>
-  <li><b>Regulacja częstotliwościowa (falownik):</b> zmiana \(f\) zmienia \(n_s\). Jednocześnie zmienia się \(U\) tak, by \(U/f = \text{const}\) — wtedy strumień (\(\Phi \sim U/f\)) zostaje stały, a rdzeń się nie nasyca.</li>
   <li>Zmiana kierunku obrotów: zamiana dwóch dowolnych faz.</li>
 </ul>
 <h3>Maszyna synchroniczna</h3>
 <p>Wirnik jest elektromagnesem (lub magnesem) i kręci się <em>dokładnie</em> z prędkością pola. Wszystkie generatory w elektrowniach to maszyny synchroniczne, dlatego częstotliwość sieci jest związana z prędkością turbin. Zmieniając prąd wzbudzenia, można regulować moc bierną.</p>
-
-<h2 id="elektronika"><span class="num">12</span> Elektronika</h2>
+</section>
+<section class="chapter" id="elektronika" data-title="Elektronika">
+<h2><span class="num">11</span> Elektronika</h2>
 <h3>Dioda</h3>
 <p>Złącze p–n przewodzi w jedną stronę. W kierunku przewodzenia spadek ~0,6–0,7 V (Si), ~0,3 V (Schottky), 1,8–3 V (LED, zależnie od koloru). LED zawsze z rezystorem: \(R = \dfrac{U_{zas} - U_{LED}}{I_{LED}}\).</p>
 <h3>Prostowniki</h3>
@@ -242,8 +247,9 @@
 <h3>Wzmacniacz operacyjny</h3>
 <p>Dwie „złote zasady” idealnego wzmacniacza z ujemnym sprzężeniem zwrotnym: (1) wejścia nie pobierają prądu, (2) wzmacniacz ustawia wyjście tak, że \(U_+ = U_-\). Z tego wyprowadzisz wszystko:</p>
 \[ \text{odwracający: } k_u = -\frac{R_2}{R_1} \qquad \text{nieodwracający: } k_u = 1 + \frac{R_2}{R_1} \qquad \text{wtórnik: } k_u = 1 \]
-
-<h2 id="pomiary"><span class="num">13</span> Miernictwo</h2>
+</section>
+<section class="chapter" id="pomiary" data-title="Miernictwo">
+<h2><span class="num">12</span> Miernictwo</h2>
 <p>Przyrząd nie może zmieniać tego, co mierzy. Stąd:</p>
 <ul>
   <li><b>Amperomierz</b> — szeregowo, opór jak najmniejszy (nie może „zabrać” napięcia).</li>
@@ -255,13 +261,13 @@
 <p><b>Pomiar rezystancji metodą techniczną:</b> przy małych \(R\) — woltomierz bezpośrednio na rezystorze (poprawnie mierzone napięcie); przy dużych \(R\) — amperomierz bezpośrednio z rezystorem (poprawnie mierzony prąd). Granica: \(R \approx \sqrt{R_A R_V}\).</p>
 <p><b>Błędy:</b> względny \(\delta = \frac{\Delta}{X}\cdot100\%\). Dla miernika analogowego klasy \(k\): \(\Delta = \frac{k \cdot \text{zakres}}{100}\) — dlatego mierz w górnej części zakresu (ten sam błąd bezwzględny to mniejszy błąd względny).</p>
 <p><b>Pomiar mocy trójfazowej:</b> układ Arona — dwa watomierze wystarczą w układzie trójprzewodowym, \(P = P_1 + P_2\) (jeden ze wskazań może wyjść ujemny przy \(\cos\varphi < 0{,}5\)).</p>
-
-<h2 id="ochrona"><span class="num">14</span> Ochrona i instalacje</h2>
+</section>
+<section class="chapter" id="ochrona" data-title="Ochrona i instalacje">
+<h2><span class="num">13</span> Ochrona i instalacje</h2>
 <p>Dla człowieka groźny jest <b>prąd</b> płynący przez ciało (szczególnie przez serce), nie samo napięcie. Napięcie jest groźne o tyle, o ile przepchnie przez opór ciała odpowiednio duży prąd. Już kilkadziesiąt mA przez kilkaset ms może wywołać migotanie komór.</p>
 <ul>
   <li><b>Wyłącznik nadprądowy (MCB)</b> chroni <em>przewody</em> przed przeciążeniem i zwarciem. Charakterystyka B: wyzwala zwarciowo przy 3–5 \(I_n\), C: 5–10 \(I_n\), D: 10–20 \(I_n\).</li>
   <li><b>Wyłącznik różnicowoprądowy (RCD)</b> chroni <em>ludzi</em>. Porównuje prąd wpływający fazą z wypływającym przewodem N. Różnica oznacza, że prąd „ucieka” inną drogą (np. przez człowieka do ziemi). Ochrona uzupełniająca: \(I_{\Delta n} = 30\,\text{mA}\).</li>
-  <li><b>Szybkie wyłączenie zasilania (SWZ):</b> impedancja pętli zwarcia musi być na tyle mała, by przy zwarciu do obudowy popłynął prąd, który wyzwoli zabezpieczenie w wymaganym czasie: \(Z_s \cdot I_a \le U_0\).</li>
 </ul>
 <p><b>Układy sieci:</b> pierwsza litera — uziemienie źródła, druga — ochrona odbiornika.</p>
 <ul>
@@ -273,27 +279,19 @@
 </ul>
 <p><b>Dobór przewodu:</b> \(I_B \le I_n \le I_Z\) (prąd obciążenia ≤ prąd znamionowy zabezpieczenia ≤ obciążalność przewodu) oraz sprawdzenie spadku napięcia. Spadek napięcia w linii jednofazowej: \(\Delta U = \dfrac{2\,l\,I\cos\varphi}{\gamma S}\) — „2” bo prąd idzie fazą i wraca neutralnym.</p>
 <p><b>Stopień ochrony IPXY:</b> X — ochrona przed ciałami stałymi (0–6), Y — przed wodą (0–8).</p>
-
-<h2 id="cyfrowa"><span class="num">15</span> Technika cyfrowa</h2>
+</section>
+<section class="chapter" id="cyfrowa" data-title="Technika cyfrowa">
+<h2><span class="num">14</span> Technika cyfrowa</h2>
 <p>Podstawowe bramki: AND, OR, NOT, a z nich NAND i NOR — każda z tych dwóch sama wystarczy do zbudowania dowolnej funkcji logicznej.</p>
 \[ \overline{A \cdot B} = \overline{A} + \overline{B} \qquad \overline{A + B} = \overline{A}\cdot\overline{B} \qquad \text{(prawa De Morgana)} \]
 <p><b>Upraszczanie:</b> tabela prawdy → siatka Karnaugha → grupuj jedynki w prostokąty o rozmiarze 1, 2, 4, 8 (sąsiedztwo także „przez krawędź”). Każda grupa to jeden iloczyn, z którego wypadają zmienne zmieniające wartość w obrębie grupy.</p>
 <p><b>Układy stykowe:</b> styki szeregowo = AND, równolegle = OR, styk rozwierny = negacja. Podtrzymanie stycznika: styk zwierny stycznika równolegle do przycisku START, a przycisk STOP (rozwierny) szeregowo.</p>
-
-<h2 id="odksztalcone"><span class="num">16</span> Przebiegi odkształcone i jakość energii</h2>
-<p>Każdy okresowy przebieg da się rozłożyć na sumę sinusoid (szereg Fouriera): składową stałą, podstawową harmoniczną i harmoniczne wyższe. Odbiorniki nieliniowe (zasilacze impulsowe, falowniki, LED) pobierają prąd odkształcony.</p>
-\[ U = \sqrt{U_0^2 + U_1^2 + U_2^2 + \dots} \qquad THD = \frac{\sqrt{U_2^2 + U_3^2 + \dots}}{U_1}\cdot100\% \]
-<ul>
-  <li>Moc czynną dają tylko pary napięcie–prąd <em>tej samej</em> harmonicznej.</li>
-  <li>Reaktancja zależy od częstotliwości: dla \(n\)-tej harmonicznej \(X_L^{(n)} = n X_L\), \(X_C^{(n)} = X_C / n\).</li>
-  <li>Harmoniczne „potrójne” (3., 9., …) w układzie trójfazowym są w fazie we wszystkich fazach, więc w przewodzie N się <b>sumują</b> — prąd w N może przekroczyć prąd fazowy.</li>
-</ul>
-
-<h2 id="sciaga"><span class="num">17</span> Ściąga wzorów</h2>
+</section>
+<section class="chapter" id="sciaga" data-title="Ściąga wzorów">
+<h2><span class="num">15</span> Ściąga wzorów</h2>
 <div class="cheat">
 <div><h4>DC</h4>\(U = RI\)<br>\(P = UI = I^2R = U^2/R\)<br>\(R = \rho l/S\)<br>\(R_T = R_{20}(1 + \alpha\Delta T)\)<br>\(P_{\max} = E^2/4R_w\)</div>
 <div><h4>C i L</h4>\(Q = CU,\ C = \varepsilon S/d\)<br>\(W_C = CU^2/2\)<br>\(u_L = L\,di/dt\)<br>\(W_L = LI^2/2\)<br>\(e = -N\,d\Phi/dt\)</div>
-<div><h4>Stany nieustalone</h4>\(x = x_\infty + (x_0 - x_\infty)e^{-t/\tau}\)<br>\(\tau = RC,\ \tau = L/R\)<br>\(5\tau\) ≈ koniec</div>
 <div><h4>AC</h4>\(U = U_m/\sqrt2\)<br>\(X_L = \omega L,\ X_C = 1/\omega C\)<br>\(Z = \sqrt{R^2 + X^2}\)<br>\(f_0 = 1/2\pi\sqrt{LC}\)</div>
 <div><h4>Moc AC</h4>\(P = UI\cos\varphi\)<br>\(Q = UI\sin\varphi\)<br>\(S = UI,\ S^2 = P^2 + Q^2\)<br>\(Q_C = P(\operatorname{tg}\varphi_1 - \operatorname{tg}\varphi_2)\)</div>
 <div><h4>3 fazy</h4>\(U = \sqrt3 U_f\)<br>Δ: \(I = \sqrt3 I_f\)<br>\(P = \sqrt3 UI\cos\varphi\)<br>\(P_\Delta = 3P_Y\)</div>
@@ -301,7 +299,23 @@
 <div><h4>Elektronika i pomiary</h4>\(U_{\text{śr}} = U_m/\pi\) (1-poł.), \(2U_m/\pi\) (2-poł.)<br>\(k_u = -R_2/R_1,\ 1 + R_2/R_1\)<br>\(R_b = R_A/(n-1)\)<br>\(R_d = R_V(n-1)\)</div>
 </div>
 <p class="muted" style="margin-top:2rem">Znalazłeś błąd albo masz pomysł, co dodać? Napisz: <a href="mailto:p.rejer10@gmail.com">p.rejer10@gmail.com</a>.</p>
+</section>
+              <nav class="chap-nav"><a class="btn ghost prev" href="#">← <span></span></a><a class="btn ghost next" href="#"><span></span> →</a></nav>
+            </article>
+          </div>
+        </div>
 
-        </article>
+        <div class="stage" id="s2" hidden>
+          <div class="stage-soon">
+            <p class="eyebrow">W przygotowaniu</p>
+            <h2>Etap II — opracuję przy przygotowaniach do zawodów okręgowych</h2>
+            <p>Na II etapie dochodzą wymagania dodatkowe z programu olimpiady. Planowane rozdziały:</p>
+            <ul class="chips" style="margin-top:1rem">
+              <li>Liczby zespolone w obwodach</li><li>Stany nieustalone</li><li>Przebiegi odkształcone i jakość energii</li>
+              <li>Napędy przekształtnikowe</li><li>Regulacja częstotliwościowa silników indukcyjnych</li><li>Stany awaryjne maszyn</li>
+              <li>Obliczenia zabezpieczeń i ochrony przeciwporażeniowej</li><li>Synteza układów przełączających</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>

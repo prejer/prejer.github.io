@@ -406,4 +406,31 @@ html[lang="pl"] .en-only { display: none; }
   .pt-card:has(.note-ico) { grid-template-columns: 72px 1fr; }
 }
 
-@media (max-width: 600px) { .topbar nav a[href$="#contact"] { display: none; } .topbar nav { gap: .8rem; } }
+@media (max-width: 600px) { .topbar nav a[data-i18n="nav.contact"] { display: none; } .topbar nav { gap: .8rem; } }
+
+/* notes tabs */
+.stage-tabs { display: inline-flex; gap: .35rem; padding: .3rem; background: var(--soft); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 2.25rem; }
+.stage-tab { border: 0; background: transparent; font: 600 .95rem "Inter", system-ui, sans-serif; color: var(--muted); padding: .55rem 1.1rem; border-radius: 9px; cursor: pointer; }
+.stage-tab small { font: 500 .72rem var(--mono); color: #94a3b8; margin-left: .35rem; }
+.stage-tab.on { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(15,23,42,.12); }
+.stage-soon { border: 1px dashed #cbd5e1; border-radius: 14px; padding: 2rem; max-width: 760px; }
+.stage-soon h2 { margin: 0 0 .75rem; font-size: 1.5rem; }
+.notes.tabbed .chapter { display: none; }
+.notes.tabbed .chapter.on { display: block; animation: fadein .2s ease; }
+@keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.notes.tabbed .chapter h2 { margin-top: 0; }
+.chap-nav { display: none; }
+.notes.tabbed .chap-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.chap-nav .next { margin-left: auto; }
+.chap-nav [hidden] { display: none; }
+@media (max-width: 900px) {
+  .toc { position: sticky; top: 64px; z-index: 5; padding: .5rem 0; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); border: 0; border-bottom: 1px solid var(--line); border-radius: 0; margin: 0 -1.5rem; }
+  .toc .eyebrow { display: none; }
+  .toc ol { display: flex; gap: .4rem; overflow-x: auto; padding: 0 1.5rem; scrollbar-width: none; }
+  .toc li { flex: none; }
+  .toc a { border: 1px solid var(--line); border-radius: 999px; padding: .3rem .8rem; white-space: nowrap; background: #fff; }
+  .toc a.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .toc a.on::before { color: #94a3b8; }
+  .stage-tab small { display: none; }
+}
+@media (max-width: 600px) { .topbar nav a[data-i18n="nav.home"] { display: none; } }
