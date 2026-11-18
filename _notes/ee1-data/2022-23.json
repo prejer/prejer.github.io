@@ -1,0 +1,18 @@
+{"src":"img","mark":"redlabel","q":[
+["C","pole","Odłączony kondensator zachowuje ładunek. C = εS/d maleje 3 razy, a energia W = Q²/(2C) rośnie 3 razy (rozsuwając okładki, wykonujesz pracę przeciw ich przyciąganiu)."],
+["D","ac","e1 to napięcie stałe E√2, e2 to sinusoida o wartości skutecznej E/√2. Woltomierz elektromagnetyczny mierzy prawdziwą wartość skuteczną: U = √((E√2)² + (E/√2)²) = E√(5/2)."],
+["B","ac","Gałąź RL równolegle z C. Przy rezonansie admitancja jest rzeczywista: Y = R/(R² + (ωL)²), więc Z = (R² + (ωL)²)/R = R + (ωL)²/R."],
+["C","dc","Skoro na R1 jest 0 V, to przez R1 nie płynie prąd. Cały prąd źródła I = 5 A płynie przez R2 i R3 szeregowo do źródła rzeczywistego: U = 5·(2 + 2) = 20 V."],
+["A","mag","Indukcyjność toroidu o przekroju prostokątnym: L = μ0μr z² a·ln(r2/r1)/(2π). μ0 z² a ln(5/3)/(2π) ≈ 8,2·10⁻⁵ H, więc μr = 0,04/8,2·10⁻⁵ ≈ 490 ≈ 500."],
+["D","mag","W środku zwoju B = μ0I/(2r). Zwój 2r z prądem I: μ0I/(4r). Zwój r z prądem 2I: μ0I/r, czyli 4 razy więcej."],
+["D","dc","Napięcie na obciążeniu to dzielnik: U = E·Ro/(Ro + Rw) = 0,95E. Stąd Ro = 0,95(Ro + Rw), czyli 0,05Ro = 0,95Rw, więc Ro/Rw = 19."],
+["B","pole","F = kQ1Q2/r² = 9·10⁹·(50/9·10⁹)(100/9·10⁹)/0,0842² ≈ 78·10⁻⁶ N. W oleju siła jest εr = 1,8 razy mniejsza: ≈ 43,4·10⁻⁶ N."],
+["C","dc","Wypadkowa jest mniejsza od 15 Ω, więc Rx trzeba dołączyć równolegle: 15·Rx/(15 + Rx) = 13, stąd 2Rx = 195 i Rx = 97,5 Ω."],
+["C","dc","Spadek na oporze wewnętrznym to E − U = 0,06 V, więc Rw = 0,06/0,38 ≈ 0,158 Ω."],
+["C","dc","Napięcie jest wspólne: G = 1/2 + 1/6 + 1/8 ≈ 0,792 S, U = 0,5/0,792 ≈ 0,63 V. Prądy: 0,63/2 ≈ 0,32 A, 0,63/6 ≈ 0,11 A, 0,63/8 ≈ 0,079 A (najwięcej płynie przez najmniejszy opór)."],
+["B","ac","Prąd trójkątny o amplitudzie 10 A ma wartość skuteczną 10/√3, więc UR = 10/√3 ≈ 5,8 V. Na cewce uL = L·di/dt = 0,005·(10 A/10 ms) = 5 V (prostokąt, wartość skuteczna 5 V). Większe jest UR."],
+["D","ac","cos φ = P/(U·I) = 900/(120·10) = 0,75."],
+["A","pole","Szeregowo: C1–C2 = 50·100/150 ≈ 33,3 pF, C3–C4 = 100·200/300 ≈ 66,7 pF. Równolegle z C5: 33,3 + 66,7 + 200 = 300 pF."],
+["C","tri","Każdy niesymetryczny odbiornik w gwieździe bez przewodu N ma przesunięty punkt gwiazdowy (wzór Millmana: V = ΣEi/Ri / Σ1/Ri). Woltomierz mierzy różnicę potencjałów obu punktów gwiazdowych — według klucza 115 V."],
+["B","elek","Napięcie średnie to wartość szczytowa razy współczynnik wypełnienia. Klucz jest włączony 80 ms z okresu 100 ms: 20 V·0,8 = 16 V."]
+]}

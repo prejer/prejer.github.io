@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="site-version" content="20261118213518">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="description" content="Zadania z I etapu olimpiady EUROELEKTRA (grupa elektryczna) z wielu edycji — wybierz dział albo losuj, sprawdź odpowiedź i zobacz krótkie wyjaśnienie.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EUROELEKTRA — zadania z I etapu · Paweł Rejer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261118213518">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="mark">PR</span><span>Paweł Rejer</span></a>
+      <nav>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="competitions.html" data-i18n="nav.competitions">Achievements</a>
+        <a href="notes.html" class="active" data-i18n="nav.notes">Notes</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <button class="lang" id="lang-toggle" aria-label="Switch language">PL</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <div class="crumbs"><a href="notes.html" data-i18n="nav.notes">Notes</a> / <a href="notes-euroelektra.html">EUROELEKTRA</a> / <span>Zadania</span></div>
+        <h1>EUROELEKTRA — zadania z I etapu</h1>
+        <p class="lead">Prawdziwe zadania z zawodów I stopnia (grupa elektryczna) z kolejnych edycji. Wybierz dział albo losuj z całości, zaznacz odpowiedź i od razu zobacz wyjaśnienie.</p>
+        <p class="en-only muted" style="font-size:.92rem">Practice tasks from past EUROELEKTRA olympiads — in Polish.</p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap quiz-wrap">
+        <div class="quiz-bar">
+          <label>Dział
+            <select id="q-topic"><option value="">Wszystkie działy</option></select>
+          </label>
+          <label>Edycja
+            <select id="q-ed"><option value="">Wszystkie edycje</option></select>
+          </label>
+          <label>Kolejność
+            <select id="q-order"><option value="rand">Losowo</option><option value="seq">Po kolei</option></select>
+          </label>
+          <div class="quiz-score"><b id="q-ok">0</b> / <span id="q-done">0</span> poprawnie · <span id="q-left"></span></div>
+        </div>
+
+        <div class="quiz-card" id="q-card">
+          <div class="q-meta"><span id="q-src"></span><span id="q-tag" class="badge"></span></div>
+          <img id="q-img" alt="Treść zadania">
+          <div class="q-opts" id="q-opts"></div>
+          <div class="q-actions">
+            <button class="btn primary" id="q-check" disabled>Sprawdź</button>
+            <button class="btn ghost" id="q-next">Następne →</button>
+          </div>
+          <div class="q-result" id="q-res" hidden></div>
+        </div>
+        <p class="muted" style="font-size:.88rem;margin-top:1.25rem">Odpowiedzi według oficjalnych kluczy organizatora. Wyjaśnienia są moje — jeśli znajdziesz błąd, napisz: <a href="mailto:p.rejer10@gmail.com">p.rejer10@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span class="year"></span> Paweł Rejer</span>
+      <nav><a href="https://www.linkedin.com/in/pawel-rejer/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:p.rejer10@gmail.com">Email</a></nav>
+    </div>
+  </footer>
+  <script src="script.js?v=20261118213518"></script>
+</body>
+</html>

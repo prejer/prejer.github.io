@@ -237,6 +237,9 @@ const pl = {
   "notes.sec": "Etap I · 16 rozdziałów",
   "notes.cheat": "Ściąga wzorów",
   "notes.soon": "Wkrótce",
+  "notes.ex.meta": "Ćwiczenia · po polsku",
+  "notes.ex.t": "EUROELEKTRA — zadania z I etapu",
+  "notes.ex.d": "Prawdziwe zadania z poprzednich edycji I etapu. Wybierz dział albo losuj, sprawdź odpowiedź i przeczytaj krótkie wyjaśnienie.",
   "notes.phys": "Fizyka",
   "notes.phys.d": "Olimpiada Fizyczna i Diamentowy Indeks AGH.",
   "notes.owt": "Inżynieria mechaniczna",
@@ -402,4 +405,77 @@ document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date
   }
   window.addEventListener("hashchange", () => show(location.hash.slice(1), true));
   show(location.hash.slice(1), false);
+})();
+
+// EUROELEKTRA practice quiz
+(function () {
+  const card = document.getElementById("q-card");
+  if (!card) return;
+  const $ = id => document.getElementById(id);
+  let data, pool = [], idx = 0, chosen = new Set(), done = 0, ok = 0, answered = false;
+  const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  function build() {
+    const t = $("q-topic").value, e = $("q-ed").value;
+    pool = data.tasks.filter(x => (!t || x.topic === t) && (!e || x.ed === e));
+    if ($("q-order").value === "rand") shuffle(pool);
+    else pool.sort((a, b) => b.ed.localeCompare(a.ed) || a.n - b.n);
+    idx = 0; show();
+  }
+  function show() {
+    answered = false; chosen.clear();
+    $("q-res").hidden = true; $("q-check").disabled = true;
+    if (!pool.length) { $("q-src").textContent = "Brak zadań dla tego filtra"; $("q-img").hidden = true; $("q-opts").innerHTML = ""; return; }
+    const q = pool[idx % pool.length];
+    $("q-img").hidden = false; $("q-img").src = q.img;
+    $("q-src").textContent = "Edycja " + q.ed + " · zadanie " + q.n;
+    $("q-tag").textContent = data.topics[q.topic] || "";
+    $("q-left").textContent = (idx % pool.length + 1) + " z " + pool.length;
+    const box = $("q-opts"); box.innerHTML = "";
+    box.classList.toggle("text", !!q.opts);
+    ["A", "B", "C", "D"].forEach((L, i) => {
+      const b = document.createElement("button");
+      b.className = "q-opt"; b.dataset.l = L;
+      b.innerHTML = "<b>" + L + "</b>" + (q.opts ? "<span></span>" : "");
+      if (q.opts) b.querySelector("span").textContent = q.opts[i];
+      b.onclick = () => {
+        if (answered) return;
+        if (q.ans.length > 1) { chosen.has(L) ? chosen.delete(L) : chosen.add(L); }
+        else { chosen.clear(); chosen.add(L); }
+        box.querySelectorAll(".q-opt").forEach(o => o.classList.toggle("sel", chosen.has(o.dataset.l)));
+        $("q-check").disabled = chosen.size === 0;
+      };
+      box.appendChild(b);
+    });
+    window.scrollTo({ top: card.getBoundingClientRect().top + window.scrollY - 90, behavior: "smooth" });
+  }
+  function check() {
+    if (answered || !chosen.size) return;
+    answered = true;
+    const q = pool[idx % pool.length];
+    const good = q.ans.length === chosen.size && q.ans.every(a => chosen.has(a));
+    done++; if (good) ok++;
+    $("q-ok").textContent = ok; $("q-done").textContent = done;
+    $("q-opts").querySelectorAll(".q-opt").forEach(o => {
+      o.disabled = true; o.classList.remove("sel");
+      if (q.ans.includes(o.dataset.l)) o.classList.add("right");
+      else if (chosen.has(o.dataset.l)) o.classList.add("wrong");
+    });
+    const r = $("q-res"); r.hidden = false;
+    r.className = "q-result " + (good ? "ok" : "bad");
+    r.innerHTML = "<strong></strong><span></span>";
+    r.querySelector("strong").textContent = good ? "Dobrze!" : "Poprawna odpowiedź: " + q.ans.join(" i ");
+    r.querySelector("span").textContent = q.expl;
+    $("q-check").disabled = true;
+  }
+  $("q-check").onclick = check;
+  $("q-next").onclick = () => { idx++; show(); };
+  ["q-topic", "q-ed", "q-order"].forEach(id => $(id).onchange = build);
+  fetch("assets/ee1/tasks.json").then(r => r.json()).then(d => {
+    data = d;
+    const counts = {};
+    d.tasks.forEach(t => counts[t.topic] = (counts[t.topic] || 0) + 1);
+    Object.entries(d.topics).filter(([k]) => counts[k]).forEach(([k, v]) => $("q-topic").add(new Option(v + " (" + counts[k] + ")", k)));
+    [...new Set(d.tasks.map(t => t.ed))].sort().reverse().forEach(e => $("q-ed").add(new Option(e, e)));
+    build();
+  });
 })();
