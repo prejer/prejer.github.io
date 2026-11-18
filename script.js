@@ -228,6 +228,20 @@ const pl = {
   "stand.tl": "Stojak na magnetyczne notatki suchościeralne — od modelu w Fusion 360 do gotowego produktu.",
   "ac.tl": "Robot z kamerą na kołach mecanum, który miał śledzić twarz — zbudowany w pięć dni na ESP32.",
 
+  // notes
+  "nav.notes": "Notatki",
+  "notes.title": "Notatki",
+  "notes.lead": "To, czego nauczyłem się, przygotowując się do olimpiad, zebrane w jednym miejscu — wyjaśnione od podstaw, a nie żargonem, żeby innym łatwiej było zobaczyć, co trzeba umieć i dlaczego to działa.",
+  "notes.ee.meta": "Elektrotechnika · po polsku",
+  "notes.ee.d": "Obwody DC i AC, stany nieustalone, układ trójfazowy, transformatory, maszyny, elektronika, miernictwo i ochrona — od ładunku i energii w górę, ze ściągą wzorów.",
+  "notes.sec": "17 rozdziałów",
+  "notes.cheat": "Ściąga wzorów",
+  "notes.soon": "Wkrótce",
+  "notes.phys": "Fizyka",
+  "notes.phys.d": "Olimpiada Fizyczna i Diamentowy Indeks AGH.",
+  "notes.owt": "Inżynieria mechaniczna",
+  "notes.owt.d": "Olimpiada Wiedzy Technicznej — mechanika i konstrukcja maszyn.",
+
   // achievements
   "comp.title": "Osiągnięcia",
   "comp.homelead": "Olimpiady i konkursy z fizyki, elektrotechniki i mechaniki.",
@@ -358,3 +372,19 @@ function openBox(start) {
 }
 
 document.querySelectorAll("span.year").forEach(el => { el.textContent = new Date().getFullYear(); });
+
+// highlight current section in notes table of contents
+(function () {
+  const links = [...document.querySelectorAll(".toc a")];
+  if (!links.length || !("IntersectionObserver" in window)) return;
+  const map = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.remove("on"));
+        const a = map.get(e.target.id); if (a) a.classList.add("on");
+      }
+    });
+  }, { rootMargin: "-80px 0px -70% 0px" });
+  document.querySelectorAll(".notes h2[id]").forEach(h => obs.observe(h));
+})();
